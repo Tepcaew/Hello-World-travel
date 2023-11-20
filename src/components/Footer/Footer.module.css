@@ -1,0 +1,39 @@
+.footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    background-color: #1f1f1f;
+    height: 450px;
+    flex-direction: column;
+  }
+  
+.FooterNawigation{
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+
+}
+
+  .footer a {
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+    margin: 0 5px; 
+    color: #f1edea;
+  }
+  
+  .footer a:hover {
+    color: #85817e;
+  }
+
+  .footer img{
+    height: 150px;
+    width: 180px;
+  }
+
+  p{
+    color: #85817e;
+
+  }
