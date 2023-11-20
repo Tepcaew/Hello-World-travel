@@ -1,0 +1,56 @@
+
+.Header{
+    background-color: rgb(168, 161, 161);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.Header img{
+    height: 80px;
+}
+
+
+
+
+.navigation{
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+
+}
+
+ a{
+    text-decoration: none;
+    color: aliceblue;
+}
+
+
+.Navigation2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 350px;
+}
+.Navigation2 p {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.Navigation2 img{
+    width: 30px;
+    height: 30px;
+}
+
+.Navigation2 button {
+    
+        border-radius: 50px;
+        height: 40px;
+        width: 120px;
+        background-color: aliceblue;
+        color:black;
+     
+}
+
+
