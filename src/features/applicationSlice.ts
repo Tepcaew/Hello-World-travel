@@ -9,28 +9,24 @@ const initialState = {
 
 export const authSignUp = createAsyncThunk(
   "auth/signUp",
-  async ({ login, password , image}, thunkAPI) => {
-
-    
+  async ({ login, password, image }, thunkAPI) => {
     const formData = new FormData();
-    formData.append("image", image)
-    formData.append("login", login)
-    formData.append("password", password)
-    
+    formData.append("image", image);
+    formData.append("login", login);
+    formData.append("password", password);
+
     try {
       const res = await fetch("http://localhost:3077/sign", {
         method: "POST",
         body: formData,
-        
       });
-      console.log(formData);
 
       const json = await res.json();
-  
+
       if (json.error) {
         return thunkAPI.rejectWithValue(json.error);
       }
-          return json
+      return json;
     } catch (e) {
       return thunkAPI.rejectWithValue(e);
     }
@@ -59,12 +55,9 @@ export const authSignIn = createAsyncThunk(
     }
   }
 );
-export const exits = createAsyncThunk(
-  "exit/user",
-  async (_, thunkAPI)=>{
-    return localStorage.clear()
-  }
-) 
+export const exits = createAsyncThunk("exit/user", async (_, thunkAPI) => {
+  return localStorage.clear();
+});
 
 export const appliactionSlice = createSlice({
   name: "signUp",
@@ -96,12 +89,10 @@ export const appliactionSlice = createSlice({
         state.signinIn = true;
         state.error = null;
         state.token = action.payload;
-        console.log(action.payload);
-        
-      }).addCase(exits.fulfilled , (state, action)=>{
-        state.token = null
-      }
-      )
+      })
+      .addCase(exits.fulfilled, (state, action) => {
+        state.token = null;
+      });
   },
 });
 
