@@ -4,13 +4,22 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    
 }
 .Header img{
     height: 80px;
 }
 
 
-
+/* .vedeoBg{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
 
 .navigation{
     display: flex;

@@ -5,6 +5,9 @@ const Header = () => {
     return (
   
           <div className={styles.Header}>
+            {/* <div className={styles.vedeoBg}>
+                <video src="https://www.youtube.com/embed/pS9tWIsAzmE?start=31&autoplay=1&loop=1&enablejsapi=1&playerapiid=featuredytplayer&controls=0&modestbranding=1&rel=0&showinfo=0&color=white&iv_load_policy=3&theme=light&wmode=transparent&origin=https://etnotravel.ru&playlist=pS9tWIsAzmE&mute=1" type ="video/mp4" autoPlay muted loop></video>
+            </div> */}
             <img src="https://static.tildacdn.com/tild3932-3539-4037-a465-346232333537/___.png" alt="logo" />
             <div className={styles.navigation}>
                 <a href="https://etnotravel.ru/tury"><p>Туры</p> </a>

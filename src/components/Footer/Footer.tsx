@@ -12,7 +12,7 @@ const Footer = () => {
             </div>
             
             <img src="https://static.tildacdn.com/tild3932-3539-4037-a465-346232333537/___.png" alt="logo" />
-             <p>© All Rights Reserved</p>
+             <span>© All Rights Reserved</span>
             </div>
             
         
