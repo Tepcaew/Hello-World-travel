@@ -13,6 +13,7 @@ const Excursion = ({ name, descr, rating, price, image, id }) => {
       <div className={styles.excursionText}>
         <h2 className={styles.excursionName}>{name}</h2>
         <div className={styles.excursionDescr}>{descr}</div>
+        
         <div className={styles.excursionPriceAndRating}>
           <div className={styles.excursionPrice}>Цена: {price} рублей</div>
           <div className={styles.excursionRating}>{rating} ⭐</div>
