@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Header.module.css'
 import watsApp from '../../assets/icons8-whatsapp-48 (1).png'
+import { Link } from 'react-router-dom';
 const Header = () => {
     return (
   
@@ -10,7 +11,7 @@ const Header = () => {
             </div> */}
             <img src="https://static.tildacdn.com/tild3932-3539-4037-a465-346232333537/___.png" alt="logo" />
             <div className={styles.navigation}>
-                <a href="https://etnotravel.ru/tury"><p>Туры</p> </a>
+                <Link to="/tours"><p>Туры</p> </Link>
                 <a href="https://etnotravel.ru/ehkskursii"> <p>Экскурсии</p></a>
                 <a href="https://etnotravel.ru/contact"> <p>Контакты</p></a>
             </div>
