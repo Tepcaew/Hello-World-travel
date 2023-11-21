@@ -1,10 +1,11 @@
-import { Navigate, Route, Routes } from "react-router-dom";
-import Carts from "./components/Body/Carts";
+import { Route, Routes } from "react-router-dom";
 import Contacts from "./components/Body/Contacts";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import Tours from "./components/Tours/Tours";
 import OneTour from "./components/Tours/OneTour";
+import Excursions from "./components/Body/Excursions";
+import OneExcursion from "./components/Body/OneExcursion";
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
         <Route path="/tours" element={<Tours/>} />
         <Route path="/tours/tours/:id" element={<OneTour/>} />
         <Route path="/contacts" element={<Contacts />} />
-        <Route path="/carts" element={<Carts />} />
+        <Route path="/excursion" element={<Excursions />} />
+        <Route path="/excursion/excursion/:id" element={<OneExcursion />} />
       </Routes>
 
       <Footer />

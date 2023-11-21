@@ -1,5 +1,4 @@
-import { createAsyncThunk, createSlice, isAction } from "@reduxjs/toolkit";
-import { getExcursion } from "./excursionSlice";
+import { createAsyncThunk, createSlice} from "@reduxjs/toolkit";
 
 const initialState = {
   tours: [],
@@ -63,13 +62,13 @@ export const toursSlice = createSlice({
       })
       .addCase(getOneTour.rejected, (state, action) => {
         state.loading = false;
-        state.error = action.payload;
+        state.error = action.payload 
       })
       .addCase(getOneTour.fulfilled, (state, action) => {
         state.loading = false;
         state.error = null;
         state.tour = action.payload;
-      })
+      });
   },
 });
 

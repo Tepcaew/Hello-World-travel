@@ -12,7 +12,7 @@ const Header = () => {
             <img src="https://static.tildacdn.com/tild3932-3539-4037-a465-346232333537/___.png" alt="logo" />
             <div className={styles.navigation}>
                 <Link to="/tours"><p>Туры</p> </Link>
-                <a href="https://etnotravel.ru/ehkskursii"> <p>Экскурсии</p></a>
+                <Link to="/excursion"> <p>Экскурсии</p></Link>
                 <a href="https://etnotravel.ru/contact"> <p>Контакты</p></a>
             </div>
            <div className={styles.Navigation2}>

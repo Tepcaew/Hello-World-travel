@@ -3,7 +3,7 @@ import styles from "./Tours.module.css";
 import { Link } from "react-router-dom";
 
 const Tour = ({ name, descr, rating, price, image, id }) => {
-  console.log(name);
+
   return (
       <Link to={`tours/${id}`} className={styles.tourCard}>
         <img
