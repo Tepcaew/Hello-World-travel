@@ -13,10 +13,10 @@ const Header = () => {
             <div className={styles.navigation}>
                 <Link to="/tours"><p>Туры</p> </Link>
                 <Link to="/excursion"> <p>Экскурсии</p></Link>
-                <a href="https://etnotravel.ru/contact"> <p>Контакты</p></a>
+                <Link to="/contacts">  <p>Контакты</p></Link>
             </div>
            <div className={styles.Navigation2}>
-           <p><a href="#">8989 912 89 89 </a> 
+           <p><a href="#">8 989 912 89 89 </a> 
            <img  src={watsApp}alt="" /></p>
             <button>подобрать тур</button>
             </div> 
