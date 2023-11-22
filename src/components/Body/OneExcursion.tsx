@@ -18,7 +18,7 @@ const OneExcursion = () => {
   return (
     <div className={styles.oneExcursion} key={oneExcursion?._id}>
       <img
-        className={styles.excursionImage}
+        className={styles.oneExcursionImage}
         src={`http://localhost:3077/${oneExcursion?.image}`}
         alt=""
       />
