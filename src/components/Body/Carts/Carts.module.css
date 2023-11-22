@@ -1,0 +1,44 @@
+.mainCart{
+    margin: auto;
+    width: 70%;
+    height: 1000px;
+}
+.title{
+    width: 100%;
+    padding-top: 100px;
+    margin: auto;
+    text-align: center;
+}
+.cart{
+    width: 300px;
+    height: 250px;
+    background-color: aquamarine;
+    border-radius: 20px;
+    margin: 10px;
+
+}
+.containerCart{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+
+
+}
+
+.btn{
+    width: 70%;
+    text-align: center;
+}
+
+ .btn button{
+    border-radius: 50px;
+    height: 60px;
+    width: 280px;
+    border-color: black;
+    background-color: white;
+    color:black;
+    margin: auto;
+}

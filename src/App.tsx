@@ -8,6 +8,9 @@ import Excursions from "./components/Body/Excursions";
 import OneExcursion from "./components/Body/OneExcursion";
 import SignIn from "./components/Sign/SignIn";
 import SignUp from "./components/Sign/SignUp";
+import Help from "./components/Body/BlockHelp/Help";
+import Reviews from "./components/Body/Reviews/Reviews";
+import ReservationTour from "./components/Body/Reservation/ReservationTour";
 
 function App() {
   return (
@@ -17,7 +20,10 @@ function App() {
       <Routes>
         <Route path="/signIn" element={<SignIn/>}/>
         <Route path="/signUp" element={<SignUp/>}/>
-
+        <Route path="/main" element={<Help/>}/>
+        <Route path="/help" element={<Help/>}/>
+        <Route path="/ReservationTour" element={<ReservationTour/>}/>
+        <Route path="/reviews" element={<Reviews/>}/>
         <Route path="/tours" element={<Tours/>} />
         <Route path="/tours/tours/:id" element={<OneTour/>} />
         <Route path="/contacts" element={<Contacts />} />
