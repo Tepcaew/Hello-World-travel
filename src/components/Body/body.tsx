@@ -1,6 +1,8 @@
-import styles from '../Body/Carts.module.css'
+import React from 'react';
+import styles from '../Body/body.module.css'
 
-const Carts = () => {
+
+const Body = () => {
     return (
         <div className={styles.container}>
             <div className={styles.text1}>
@@ -130,4 +132,5 @@ const Carts = () => {
     );
 };
 
-export default Carts;
+
+export default Body;
