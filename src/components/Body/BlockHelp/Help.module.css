@@ -1,0 +1,27 @@
+.containerHelp{
+    width: 70%;
+    margin: auto;
+    height: 300px;
+
+}
+
+
+
+
+.blockInput{
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+}
+
+input{
+    width: 22%;
+    height: 50px;
+}
+
+.btnHelp{
+    border-radius: 50px;
+    width: 150px;
+    color: white;
+    background-color:cadetblue;
+}
