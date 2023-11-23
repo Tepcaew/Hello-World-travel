@@ -11,6 +11,7 @@ import SignUp from "./components/Sign/SignUp";
 import Help from "./components/Body/BlockHelp/Help";
 import Reviews from "./components/Body/Reviews/Reviews";
 import ReservationTour from "./components/Body/Reservation/ReservationTour";
+import Categories from "./components/Categories/Categories";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/ReservationTour" element={<ReservationTour/>}/>
         <Route path="/reviews" element={<Reviews/>}/>
         <Route path="/tours" element={<Tours/>} />
+        <Route path="/tours/:categoryId" element={<Tours/>} />
         <Route path="/tours/tours/:id" element={<OneTour/>} />
         <Route path="/contacts" element={<Contacts />} />
         <Route path="/excursion" element={<Excursions />} />
