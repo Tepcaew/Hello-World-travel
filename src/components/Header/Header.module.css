@@ -1,9 +1,13 @@
 
 .Header{
-    background-color: rgb(168, 161, 161);
+    background-color: #1f1f1f;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    position: relative;
+    min-width: 100%;
+    width: 100%;
+    z-index: 1;
     
 }
 .Header img{
