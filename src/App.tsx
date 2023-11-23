@@ -26,8 +26,8 @@ function App() {
         <Route path="/ReservationTour" element={<ReservationTour/>}/>
         <Route path="/reviews" element={<Reviews/>}/>
         <Route path="/tours" element={<Tours/>} />
-        <Route path="/tours/:categoryId" element={<Tours/>} />
-        <Route path="/tours/tours/:id" element={<OneTour/>} />
+        <Route path="/tours/category/:categoryId" element={<Tours/>} />
+        <Route path="/tours/:id" element={<OneTour/>} />
         <Route path="/contacts" element={<Contacts />} />
         <Route path="/excursion" element={<Excursions />} />
         <Route path="/excursion/excursion/:id" element={<OneExcursion />} />

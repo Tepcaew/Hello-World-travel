@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Category = ({ categoryName, categoryId }) => {
   return (
-    <Link to={`/tours/${categoryId}`} className={styles.category}>
+    <Link to={`category/${categoryId}`} className={styles.category}>
       <h3>{categoryName}</h3>
     </Link>
   );
