@@ -21,12 +21,11 @@ function App() {
 
 
       <Header />
-      <Body/>
       
       <Routes>
         <Route path="/signIn" element={<SignIn/>}/>
         <Route path="/signUp" element={<SignUp/>}/>
-        <Route path="/main" element={<Help/>}/>
+        <Route path="/main" element={<Body/>}/>
         <Route path="/help" element={<Help/>}/>
         <Route path="/ReservationTour" element={<ReservationTour/>}/>
         <Route path="/reviews" element={<Reviews/>}/>

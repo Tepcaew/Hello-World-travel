@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from '../Body/body.module.css'
+import Guides from '../guides/Guides';
 
 
 const Body = () => {
@@ -61,34 +62,7 @@ const Body = () => {
                         Все гиды в нашей команде – профессиональные путешественники с многолетним опытом.</p>
                 </div>
             </div>
-            <div className={styles.contGid}>
-                <div className={styles.bodyGid}>
-                    <div className={styles.infoGid}>
-                        <div className={styles.image}></div>
-                        <div className={styles.infoGidCart}>
-                            <p className={styles.nameGid}>Мухьаммад-Амин</p>
-                            <p className={styles.author}>Автор туров</p>
-                            <p className={styles.organiz}>Организация индивидуальных многодневных туров, однодневных групповых экскурсий по всему Чечню.</p>
-                        </div>
-                    </div>
-                    <div className={styles.infoGid2}>
-                        <div className={styles.image2}></div>
-                        <div className={styles.infoGidCart2}>
-                            <p className={styles.nameGid2}>Мухьаммад-Амин</p>
-                            <p className={styles.author2}>Автор туров</p>
-                            <p className={styles.organiz2}>Организация индивидуальных многодневных туров, однодневных групповых экскурсий по всему Чечню.</p>
-                        </div>
-                    </div>
-                    <div className={styles.infoGid3}>
-                        <div className={styles.image3}></div>
-                        <div className={styles.infoGidCart3}>
-                            <p className={styles.nameGid3}>Мухьаммад-Амин</p>
-                            <p className={styles.author3}>Автор туров</p>
-                            <p className={styles.organiz3}>Организация индивидуальных многодневных туров, однодневных групповых экскурсий по всему Чечню.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+           <Guides/>
             <div className={styles.contTourInfoPer}>
                 <div className={styles.bodyTourInfoPer}>
                     <p className={styles.textTourPer}>Туры с перелетом</p>

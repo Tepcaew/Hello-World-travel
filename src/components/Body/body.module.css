@@ -373,8 +373,7 @@
 }
 
 .bodyTourInfoPer {
-    padding-left: 100px;
-    max-width: 960px;
+    max-width: 1000px;
 }
 
 .textTourPer {
@@ -403,6 +402,7 @@
     margin-left: 20px;
     margin-right: 20px;
     width: 100%;
+    margin-bottom: 50px;
 }
 
 .bodyList {
