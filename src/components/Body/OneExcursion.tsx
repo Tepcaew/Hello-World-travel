@@ -17,11 +17,13 @@ const OneExcursion = () => {
 
   return (
     <div className={styles.oneExcursion} key={oneExcursion?._id}>
-      <img
-        className={styles.oneExcursionImage}
-        src={`http://localhost:3077/${oneExcursion?.image}`}
-        alt=""
-      />
+      <div>
+        <img
+          className={styles.excursionImage}
+          src={`http://localhost:3077/${oneExcursion?.image}`}
+          alt=""
+        />
+      </div>
       <div className={styles.excursionText}>
         <h2 className={styles.excursionName}>{oneExcursion?.name}</h2>
         <div className={styles.excursionDescr}>{oneExcursion?.descr}</div>
