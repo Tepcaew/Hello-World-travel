@@ -10,6 +10,7 @@ const OneTour = () => {
 
   const { id } = useParams();
   const oneTour = tours?.find((tour) => tour._id === id);
+  console.log(id)
   useEffect(() => {
     dispatch(getTours());
   }, [dispatch]);

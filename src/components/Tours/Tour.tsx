@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Tour = ({ name, descr, rating, price, image, id }) => {
 
   return (
-      <Link to={`tours/${id}`} className={styles.tourCard}>
+      <Link to={`/tours/${id}`} className={styles.tourCard}>
         <img
           className={styles.tourImage}
           src={`http://localhost:3077/${image}`}
