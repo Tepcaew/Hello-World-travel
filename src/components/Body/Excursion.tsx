@@ -6,7 +6,7 @@ const Excursion = ({ name, descr, rating, price, image, id }) => {
   return (
     <Link to={`excursion/${id}`} className={styles.excursionCard}>
       <img
-        className={styles.tourImage}
+        className={styles.excursionImage}
         src={`http://localhost:3077/${image}`}
         alt=""
       />

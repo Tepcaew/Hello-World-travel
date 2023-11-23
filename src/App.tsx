@@ -11,6 +11,7 @@ import SignUp from "./components/Sign/SignUp";
 import Help from "./components/Body/BlockHelp/Help";
 import Reviews from "./components/Body/Reviews/Reviews";
 import ReservationTour from "./components/Body/Reservation/ReservationTour";
+import Carts from "./components/Body/Carts/Carts";
 
 function App() {
   return (
@@ -18,9 +19,10 @@ function App() {
       <Header />
       
       <Routes>
+        <Route path="/qw" element={<Carts/>}/>
         <Route path="/signIn" element={<SignIn/>}/>
         <Route path="/signUp" element={<SignUp/>}/>
-        <Route path="/main" element={<Help/>}/>
+        <Route path="/main" element={<body/>}/>
         <Route path="/help" element={<Help/>}/>
         <Route path="/ReservationTour" element={<ReservationTour/>}/>
         <Route path="/reviews" element={<Reviews/>}/>
