@@ -11,20 +11,22 @@ import SignUp from "./components/Sign/SignUp";
 import Help from "./components/Body/BlockHelp/Help";
 import Reviews from "./components/Body/Reviews/Reviews";
 import ReservationTour from "./components/Body/Reservation/ReservationTour";
-import Categories from "./components/Categories/Categories";
-import Body from "./components/Body/body";
+
+import styles from "../src/components/Body/Excursions.module.css"
+
 
 function App() {
   return (
-    <div>
+    <div className={styles.aad}>
 
 
       <Header />
       
       <Routes>
+
         <Route path="/signIn" element={<SignIn/>}/>
         <Route path="/signUp" element={<SignUp/>}/>
-        <Route path="/main" element={<Body/>}/>
+        <Route path="/main" element={<Help/>}/>
         <Route path="/help" element={<Help/>}/>
         <Route path="/ReservationTour" element={<ReservationTour/>}/>
         <Route path="/reviews" element={<Reviews/>}/>
