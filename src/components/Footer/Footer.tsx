@@ -1,13 +1,14 @@
 import React from 'react';
 import styles from './Footer.module.css'
+import { Link } from 'react-router-dom';
 const Footer = () => {
     return (
         <div className={styles.footer}>
             <div className={styles.FooterNawigation}>
-                <a href="#"> Главная </a>
-                <a href="#"> Туры</a>
-                <a href="#"> Экскурсии</a>
-                <a href="#"> Контакты</a>
+                <Link to="/"> Главная </Link>
+                <Link to="/tours"> Туры</Link>
+                <Link to="/excursion"> Экскурсии</Link>
+                <Link to="/contacts"> Контакты</Link>
                 <a href="#"> WhatsApp</a>
             </div>
             

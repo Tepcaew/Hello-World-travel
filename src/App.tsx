@@ -1,5 +1,3 @@
-
-
 import { Route, Routes } from "react-router-dom";
 import Contacts from "./components/Body/Contacts";
 import Footer from "./components/Footer/Footer";
@@ -13,7 +11,7 @@ import SignUp from "./components/Sign/SignUp";
 import Help from "./components/Body/BlockHelp/Help";
 import Reviews from "./components/Body/Reviews/Reviews";
 import ReservationTour from "./components/Body/Reservation/ReservationTour";
-import Body from "./components/Body/body";
+import Categories from "./components/Categories/Categories";
 
 function App() {
   return (
@@ -25,11 +23,12 @@ function App() {
       <Routes>
         <Route path="/signIn" element={<SignIn/>}/>
         <Route path="/signUp" element={<SignUp/>}/>
-        <Route path="/main" element={<Body/>}/>
+        <Route path="/main" element={<Help/>}/>
         <Route path="/help" element={<Help/>}/>
         <Route path="/ReservationTour" element={<ReservationTour/>}/>
         <Route path="/reviews" element={<Reviews/>}/>
         <Route path="/tours" element={<Tours/>} />
+        <Route path="/tours/:categoryId" element={<Tours/>} />
         <Route path="/tours/tours/:id" element={<OneTour/>} />
         <Route path="/contacts" element={<Contacts />} />
         <Route path="/excursion" element={<Excursions />} />

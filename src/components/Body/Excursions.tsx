@@ -13,7 +13,7 @@ const Excursions = () => {
   }, [dispatch]);
 
   return (
-    <div className={styles.toursContainer}>
+    <div className={styles.excursionContainer}>
       {excursions.map((excursion) => {
         return (
           <Excursion
