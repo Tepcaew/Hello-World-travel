@@ -3,6 +3,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { getExcursion } from "../../features/excursionSlice";
 import styles from "./Excursions.module.css";
+import { Navigation, Pagination, Scrollbar, A11y, Keyboard } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
 
 const OneExcursion = () => {
   const dispatch = useDispatch();
@@ -18,11 +21,47 @@ const OneExcursion = () => {
   return (
     <div className={styles.oneExcursion} key={oneExcursion?._id}>
       <div>
-        <img
-          className={styles.excursionImage}
+      <Swiper
+      modules={[Navigation, Pagination, Scrollbar, A11y]}
+      spaceBetween={30}
+      slidesPerView={1}
+      navigation
+      keyboard
+      pagination={{ clickable: true }}
+      scrollbar={{ draggable: true }}
+      onSwiper={(swiper) => console.log(swiper)}
+      onSlideChange={() => console.log('slide change')}
+    >
+      <SwiperSlide><img
+          className={styles.oneExcursionImage}
           src={`http://localhost:3077/${oneExcursion?.image}`}
           alt=""
-        />
+        /></SwiperSlide>
+      <SwiperSlide><img
+          className={styles.oneExcursionImage}
+          src={`http://localhost:3077/${oneExcursion?.image}`}
+          alt=""
+        /></SwiperSlide>
+      <SwiperSlide>        <img
+          className={styles.oneExcursionImage}
+          src={`http://localhost:3077/${oneExcursion?.image}`}
+          alt=""
+        /></SwiperSlide>
+      <SwiperSlide>        <img
+          className={styles.oneExcursionImage}
+          src={`http://localhost:3077/${oneExcursion?.image}`}
+          alt=""
+        /></SwiperSlide>
+      ...
+    </Swiper>
+
+
+
+        {/* <img
+          className={styles.oneExcursionImage}
+          src={`http://localhost:3077/${oneExcursion?.image}`}
+          alt=""
+        /> */}
       </div>
       <div className={styles.excursionText}>
         <h2 className={styles.excursionName}>{oneExcursion?.name}</h2>

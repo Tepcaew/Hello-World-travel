@@ -12,18 +12,18 @@ import Help from "./components/Body/BlockHelp/Help";
 import Reviews from "./components/Body/Reviews/Reviews";
 import ReservationTour from "./components/Body/Reservation/ReservationTour";
 
-
+import styles from "../src/components/Body/Excursions.module.css"
 
 
 function App() {
   return (
-    <div>
+    <div className={styles.aad}>
 
 
       <Header />
       
       <Routes>
-        <Route path="/qw" element={<Carts/>}/>
+
         <Route path="/signIn" element={<SignIn/>}/>
         <Route path="/signUp" element={<SignUp/>}/>
         <Route path="/main" element={<Help/>}/>
