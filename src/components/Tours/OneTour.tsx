@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { getTours } from "../../features/toursSlice";
 import { useParams } from "react-router-dom";
 import styles from "./Tours.module.css";
-import Header from "../Header/Header";
 
 const OneTour = () => {
   const dispatch = useDispatch();
@@ -11,7 +10,7 @@ const OneTour = () => {
 
   const { id } = useParams();
   const oneTour = tours?.find((tour) => tour._id === id);
-
+  console.log(id)
   useEffect(() => {
     dispatch(getTours());
   }, [dispatch]);
@@ -25,9 +24,14 @@ const OneTour = () => {
       />
       <div className={styles.oneTour} key={oneTour?._id}>
         <div className={styles.oneTourHead}>
-          <video autoPlay loop className={styles.oneTourImage}>
-            <source src={`http://localhost:3077/${oneTour?.video}`} />
-          </video>
+          <iframe
+            className={styles.oneTourImage}
+            src={`https://www.youtube.com/embed/${oneTour?.video}?autoplay=1&mute=0`}
+            name="youtube embed"
+            allow="autoplay; encrypted-media"
+            allowFullScreen
+            frameBorder={0}
+          ></iframe>
           <div className={styles.oneTourText}>
             <h2 className={styles.oneTourName}>{oneTour?.name} </h2>
             <div className={styles.oneTourDescr}>{oneTour?.descr}</div>

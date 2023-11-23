@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Contacts.module.css";
 import { YMaps, Map } from "react-yandex-maps";
 import whatsApp from "../../assets/whats.png";
@@ -6,8 +6,30 @@ import telegramm from "../../assets/telegramm.png";
 import facebook from "../../assets/facebook.png";
 import vk from "../../assets/vk.png";
 import youTube from "../../assets/youTube.png";
+import { useDispatch } from "react-redux";
+import { addOrders } from "../../features/ordersSlice";
 
 const Contacts = () => {
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [message, setMessage] = useState("");
+
+  const dispatch = useDispatch();
+
+  const handleSetName = (e) => {
+    setName(e.target.value);
+  };
+  const handleSetPhone = (e) => {
+    setPhone(e.target.value);
+  }
+  const handleSetMessage = (e) => {
+    setMessage(e.target.value);
+}
+
+  const handleAddorders = () => {
+    dispatch(addOrders({name, phone, message }));
+  };
+
   return (
     <div className={styles.contactsContainer}>
       <div className={styles.textEthno}>
@@ -100,13 +122,13 @@ const Contacts = () => {
             <p>Заполните заявку и мы свяжемся с Вами!</p>
           </div>
           <p>имя</p>
-          <input type="text" />
+          <input value={name} onChange={handleSetName} type="text" />
           <p>телефон</p>
-          <input type="text" />
+          <input value={phone} onChange={handleSetPhone} type="text" />
           <p>сообщение</p>
-          <input type="text" />
+          <input value={message} onChange={handleSetMessage} type="text" />
         </div>
-        <button>отправить</button>
+        <button onClick={handleAddorders}>отправить</button>
         <p className={styles.pt}>
           Нажимая на кнопку "Отправить", Вы соглашаетесь с условиями и
           пользовательским соглашением.
