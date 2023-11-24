@@ -35,7 +35,7 @@ function App() {
         <Route path="/tours/:id" element={<OneTour/>} />
         <Route path="/contacts" element={<Contacts />} />
         <Route path="/excursion" element={<Excursions />} />
-        <Route path="/excursion/excursion/:id" element={<OneExcursion />} />
+        <Route path="/excursion/:id" element={<OneExcursion />} />
       </Routes>
 
       <Footer />

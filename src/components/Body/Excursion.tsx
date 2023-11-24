@@ -2,9 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styles from "../Body/Excursions.module.css";
 
-const Excursion = ({ name, descr, rating, price, image, id }) => {
+const Excursion = ({ name, descr, rating, price, image, id}) => {
   return (
-    <Link to={`excursion/${id}`} className={styles.excursionCard}>
+    <Link to={`/excursion/${id}`} className={styles.excursionCard}>
       <img
         className={styles.excursionImage}
         src={`http://localhost:3077/${image}`}

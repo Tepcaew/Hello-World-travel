@@ -6,30 +6,26 @@ import { useDispatch, useSelector } from "react-redux";
 import { getExcursion } from "../../features/excursionSlice";
 import { getTours } from "../../features/toursSlice";
 const Header = () => {
-    const dispatch = useDispatch()
-    const tours = useSelector((state)=> state.tours.tours)
-    const excursion = useSelector((state)=> state.excursion.excursion)
+  const dispatch = useDispatch();
+  const tours = useSelector((state) => state.tours.tours);
+  const excursion = useSelector((state) => state.excursion.excursion);
 
-    const all = tours.concat(excursion)
-    console.log(all);
-    
-  const [ off, setOff] = useState(true)
-    const  [value, setValue] = useState('')
+  const all = tours.concat(excursion);
+  console.log(all);
 
-    const filtered = all.filter((item) => {
-        return item.name.toLowerCase().includes(value.toLowerCase());
-      });
-const handle = ()=>{
-  setOff(false)
-}
-      
-    useEffect(()=>{
-        dispatch(getExcursion(), getTours())
-    }, [dispatch])
-    
+  const [off, setOff] = useState(true);
+  const [value, setValue] = useState("");
 
+  const filtered = all.filter((item) => {
+    return item.name.toLowerCase().includes(value.toLowerCase());
+  });
+  const handle = () => {
+    setOff(false);
+  };
 
-
+  useEffect(() => {
+    dispatch(getExcursion(), getTours());
+  }, [dispatch]);
 
   return (
     <div className={styles.Header}>
@@ -52,33 +48,46 @@ const handle = ()=>{
           <p>Контакты</p>
         </Link>
       </div>
-              <button>подобрать тур</button>
+      <button>подобрать тур</button>
       <div className={styles.Navigation2}>
-
-                <div className={styles.cntr}>
-                <div className={styles.cntr}>
-                    <div className={styles.cntrinnr}>
-                    <label className={`${styles.search} inpt_search`}>
-                        <input  onChange={(e)=>setValue(e.target.value)}  id="inpt_search" type="text" />
-                        {off&&<ul className={styles.autocomplete}>
-                            {value?filtered.map((item)=>{
-                                return <Link to={`/excursion/excursion/${item._id}`}><li  className={styles.item}>{item.name}</li></Link>
-                            }
-                            ):null}
-                         </ul>}
-                    </label>
-                    </div>
-                </div>
-                </div>
-
+        <div className={styles.cntr}>
+          <div className={styles.cntr}>
+            <div className={styles.cntrinnr}>
+              <label className={`${styles.search} inpt_search`}>
+                <input
+                  onChange={(e) => setValue(e.target.value)}
+                  id="inpt_search"
+                  type="text"
+                />
+                {off && (
+                  <ul className={styles.autocomplete}>
+                    {value
+                      ? filtered.map((item) => {
+                          return (
+                            <Link
+                              to={
+                                item.length
+                                  ? `/tours/${item._id}`
+                                  : `/excursion/${item._id}`
+                              }
+                            >
+                              <li className={styles.item} key={item._id}>{item.name}</li>
+                            </Link>
+                          );
+                        })
+                      : null}
+                  </ul>
+                )}
+              </label>
+            </div>
+          </div>
+        </div>
       </div>
-
     </div>
   );
 };
 
 export default Header;
 function usestate(data: any): [any, any] {
-    throw new Error("Function not implemented.");
+  throw new Error("Function not implemented.");
 }
-

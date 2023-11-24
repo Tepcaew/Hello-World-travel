@@ -66,7 +66,7 @@ const OneExcursion = () => {
       <div className={styles.excursionText}>
         <h2 className={styles.excursionName}>{oneExcursion?.name}</h2>
         <div className={styles.excursionDescr}>{oneExcursion?.descr}</div>
-        <div className={styles.excursionDescr}>{oneExcursion.moreDescr}</div>
+        <div className={styles.excursionDescr}>{oneExcursion?.moreDescr}</div>
         <div className={styles.excursionPriceAndRating}>
           <div className={styles.excursionPrice}>
             Цена: {oneExcursion?.price} рублей
