@@ -10,7 +10,6 @@ const Guides = () => {
     useEffect(() => {
       dispatch(getGuide());
     }, [dispatch]);
-console.log(guides)
     return (
         <div className={styles.guidesContainer}>
             {guides.map((guide) => {

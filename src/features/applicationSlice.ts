@@ -5,6 +5,7 @@ const initialState = {
   signinUp: false,
   signinIn: false,
   token: localStorage.getItem("token"),
+  user: {},
 };
 
 export const authSignUp = createAsyncThunk(
@@ -55,12 +56,34 @@ export const authSignIn = createAsyncThunk(
     }
   }
 );
+
+export const getUserById = createAsyncThunk(
+  "user/fetch",
+  async (_, thunkAPI) => {
+    try {
+      const res = await fetch("http://localhost:3077/user", {
+        headers: {
+          Authorization: `Bearer ${thunkAPI.getState().application.token}`,
+        },
+      });
+
+      const user = await res.json();
+      if (user.error) {
+        return thunkAPI.rejectWithValue(user.error);
+      }
+      return user;
+    } catch (error) {
+      thunkAPI.rejectWithValue(error);
+    }
+  }
+);
+
 export const exits = createAsyncThunk("exit/user", async (_, thunkAPI) => {
   return localStorage.clear();
 });
 
 export const appliactionSlice = createSlice({
-  name: "signUp",
+  name: "application",
   initialState,
   reducers: {},
   extraReducers: (builder) => {
@@ -92,6 +115,10 @@ export const appliactionSlice = createSlice({
       })
       .addCase(exits.fulfilled, (state, action) => {
         state.token = null;
+        state.user = {};
+      })
+      .addCase(getUserById.fulfilled, (state, action) => {
+        state.user = action.payload;
       });
   },
 });

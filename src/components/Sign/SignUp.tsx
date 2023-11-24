@@ -1,19 +1,21 @@
 import React, { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { authSignUp } from "../../features/applicationSlice";
 import { Link } from "react-router-dom";
 import styles from "./Sign.module.css"
 
 const SignUp = () => {
+  const error = useSelector((state) => state.application.error)
   const [login, setLogin] = useState("");
   const [password, setPassword] = useState("");
-  const [image, setImage] = useState(null);
+  const [image, setImage] = useState("");
 
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(authSignUp());
-  }, [dispatch]);
+  // useEffect(() => {
+  //   dispatch(authSignUp());
+  // }, [dispatch]);
+
   const handleLogin = (e) => {
     setLogin(e.target.value);
   };
@@ -30,6 +32,7 @@ const SignUp = () => {
   return (
     <>
       <div className={styles.main}>
+        {error ? <div>{error}</div> : null}
         <form action="" onSubmit={handleSignUp}>
           <input type="text" value={login} onChange={handleLogin} />
           <input type="text" value={password} onChange={handlePassword} />
@@ -38,7 +41,7 @@ const SignUp = () => {
         </form>
       </div>
       <div>
-        <Link to="/signIn">у меня уже есть аккаунт</Link>
+        <Link to="/login">у меня уже есть аккаунт</Link>
       </div>
     </>
   );
