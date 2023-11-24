@@ -62,7 +62,7 @@ const Contacts = () => {
             <Map
               className={styles.Map}
               defaultState={{
-                center: [48.699855, 44.494041],
+                center: [42.972968, 47.517231],
                 zoom: 17,
               }}
             />

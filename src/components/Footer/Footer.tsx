@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Footer.module.css'
 import { Link } from 'react-router-dom';
+import logo from "../../assets/helloworld.png"
 const Footer = () => {
     return (
         <div className={styles.footer}>
@@ -12,8 +13,8 @@ const Footer = () => {
                 <a href="#"> WhatsApp</a>
             </div>
             
-            <img src="https://static.tildacdn.com/tild3932-3539-4037-a465-346232333537/___.png" alt="logo" />
-             <span>© All Rights Reserved</span>
+            <img src={logo} className={styles.footerLogo}/>
+             <span>2023</span>
             </div>
             
         
