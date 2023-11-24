@@ -125,10 +125,9 @@
   display: inline-block; /* Строчно-блочный элемент */
   overflow: hidden; /* Скрываем всё за контуром */
   height: 350px;
-  z-index: 100;
  }
  .tourImage{
-  transition: 1s; /* Время эффекта */
+  transition: 1s ease-out 0.6s; /* Время эффекта */
   display: block; /* Убираем небольшой отступ снизу */
  }
  .tourImage:hover {
