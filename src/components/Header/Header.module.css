@@ -118,9 +118,7 @@
     background: transparent;
     outline-width: 0px;
 }
-.search{
 
-}
 .autocomplete{
     position: absolute;
     z-index: 300;

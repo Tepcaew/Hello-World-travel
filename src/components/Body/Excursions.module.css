@@ -69,6 +69,10 @@
     transform: scale(1.2); /* Увеличиваем масштаб */
     z-index: 101;
    }
+   .aad{
+    background-color: lightslategrey;
+    margin: 0;
+  }
 
 
    
