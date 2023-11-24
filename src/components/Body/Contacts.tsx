@@ -4,10 +4,6 @@ import { YMaps, Map } from "react-yandex-maps";
 import whatsApp from "../../assets/whats.png";
 import telegramm from "../../assets/telegramm.png";
 import facebook from "../../assets/facebook.png";
-import vk from "../../assets/vk.png";
-import youTube from "../../assets/youTube.png";
-import { useDispatch } from "react-redux";
-import { addOrders } from "../../features/ordersSlice";
 import ReservationTour from "./Reservation/ReservationTour";
 
 const Contacts = () => {
@@ -83,20 +79,6 @@ const Contacts = () => {
             />
           </YMaps>
         </div>
-      </div>
-      <div className={styles.botoomIcon}>
-        <a href="#">
-          <img src={telegramm} alt="" />
-        </a>
-        <a href="#">
-          <img src={facebook} alt="" />
-        </a>
-        <a href="#">
-          <img src={vk} alt="" />
-        </a>
-        <a href="#">
-          <img src={youTube} alt="" />
-        </a>
       </div>
       <ReservationTour/>
     </div>

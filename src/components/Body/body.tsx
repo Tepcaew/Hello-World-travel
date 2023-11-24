@@ -17,7 +17,7 @@ const Body = () => {
   return (
     <div className={styles.container}>
       <div className={styles.text1}>
-        <p className={styles.p1}>Туры по России с <span className={styles.helloworld}>Hello, World!</span> </p>
+        <p className={styles.p1}>Туры по всей России с <span className={styles.helloworld}>Hello, World!</span> </p>
         <img src={samolet} alt="samolet" className={styles.samolet}/>
       </div>
       <div className={styles.text2}>
@@ -39,7 +39,7 @@ const Body = () => {
         <div className={styles.contTextInfo}>
           <div className={styles.textInfo1}>Наша команда гидов-экскурсоводов</div>
           <div className={styles.textInfo2}>
-            На фотографиях ниже — люди, которые создали семью EtnoTrvel. Они
+            На фотографиях ниже — люди, которые создали семью Hello, World! Они
             ответят на все вопросы и помогут с организацией тура. Все гиды в
             нашей команде – профессиональные путешественники с многолетним
             опытом.
