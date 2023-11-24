@@ -11,7 +11,7 @@ const Tours = () => {
   const dispatch = useDispatch();
   const { categoryId } = useParams();
   const tourFilter = tours.filter((tour) => {
-    if (!categoryId) return true;    
+    if (!categoryId) return true;
     return tour.categoryName._id === categoryId;
   });
   useEffect(() => {

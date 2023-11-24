@@ -22,7 +22,7 @@
 }
 
 .guideImage{
-    width: 350px;
+    width: 100%;
     display: flex;
     margin-bottom: 4px;
 }
@@ -58,7 +58,11 @@
 }
 
 .guidesContainer {
+    width: 100%;
     display: flex;
     gap: 30px;
     justify-content: center;
+}
+.guideCard{
+    width: 30%;
 }

@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import Contacts from "./components/Body/Contacts";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
@@ -12,34 +12,41 @@ import Help from "./components/Body/BlockHelp/Help";
 import Reviews from "./components/Body/Reviews/Reviews";
 import ReservationTour from "./components/Body/Reservation/ReservationTour";
 
-import styles from "../src/components/Body/Excursions.module.css"
-
+import styles from "../src/components/Body/Excursions.module.css";
+import Body from "./components/Body/body";
+import { useSelector } from "react-redux";
 
 function App() {
+  const token = useSelector((state) => state.application.token);
   return (
     <div className={styles.aad}>
-
-
       <Header />
-      
-      <Routes>
 
-        <Route path="/signIn" element={<SignIn/>}/>
-        <Route path="/signUp" element={<SignUp/>}/>
-        <Route path="/main" element={<Help/>}/>
-        <Route path="/help" element={<Help/>}/>
-        <Route path="/ReservationTour" element={<ReservationTour/>}/>
-        <Route path="/reviews" element={<Reviews/>}/>
-        <Route path="/tours" element={<Tours/>} />
-        <Route path="/tours/category/:categoryId" element={<Tours/>} />
-        <Route path="/tours/:id" element={<OneTour/>} />
+      <Routes>
+        {token ? (
+          <>
+            <Route path="/login" element={<Navigate to="/" />} />
+            <Route path="/signup" element={<Navigate to="/" />} />
+          </>
+        ) : (
+          <>
+            <Route path="/login" element={<SignIn />} />
+            <Route path="/signup" element={<SignUp />} />
+          </>
+        )}
+        <Route path="/" element={<Body />} />
+        <Route path="/help" element={<Help />} />
+        <Route path="/ReservationTour" element={<ReservationTour />} />
+        <Route path="/reviews" element={<Reviews />} />
+        <Route path="/tours" element={<Tours />} />
+        <Route path="/tours/category/:categoryId" element={<Tours />} />
+        <Route path="/tours/:id" element={<OneTour />} />
         <Route path="/contacts" element={<Contacts />} />
         <Route path="/excursion" element={<Excursions />} />
         <Route path="/excursion/:id" element={<OneExcursion />} />
       </Routes>
 
       <Footer />
-
     </div>
   );
 }

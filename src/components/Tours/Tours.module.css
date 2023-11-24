@@ -7,7 +7,6 @@
   flex-wrap: wrap;
   justify-content: center;
   padding:  20px 0;
-  
 }
 .tourCard {
   width: 45%;
@@ -127,10 +126,24 @@
   height: 350px;
  }
  .tourImage{
-  transition: 1s ease-out 0.6s; /* Время эффекта */
+  transition: 1s; /* Время эффекта */
   display: block; /* Убираем небольшой отступ снизу */
  }
  .tourImage:hover {
   transform: scale(1.2); /* Увеличиваем масштаб */
   z-index: 101;
  }
+ .tourCards {
+  width: 23%;
+  margin: 10px auto;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  background-color: #1f1f1f;
+  color: white;
+  border-radius: 20px;
+  box-shadow: 2px 4px 14px 3px rgba(34, 60, 80, 0.2);
+}
+.tourCards:hover {
+  box-shadow: rgba(32, 35, 34, 0.812) -1px -1px 30px;
+}

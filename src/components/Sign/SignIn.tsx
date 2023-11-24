@@ -1,40 +1,41 @@
-import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
-import { authSignIn } from '../../features/applicationSlice';
+import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
+import { authSignIn } from "../../features/applicationSlice";
 
 const SignIn = () => {
-    const [login, setLogin] = useState('')
-    const [password, setPassword] = useState('')
-    const [sign , setSign] = useState(false)
+  const error = useSelector((state) => state.application.error);
+  const [login, setLogin] = useState("");
+  const [password, setPassword] = useState("");
 
-    const dispatch = useDispatch()
-    const handleLogin = (e)=>{
-        setLogin(e.target.value)
-    }
-    const handlePassword = (e)=>{
-        setPassword(e.target.value)
-    }
-    const handlePush = async ()=>{
-        await dispatch(authSignIn({login, password}))
-        setSign(true)
-    }
+  const dispatch = useDispatch();
+  const handleLogin = (e) => {
+    setLogin(e.target.value);
+  };
+  const handlePassword = (e) => {
+    setPassword(e.target.value);
+  };
+  const handlePush = (e) => {
+    e.preventDefault();
+    dispatch(authSignIn({ login, password }));
+  };
 
-    return (
-        <div>
-        <p>войдите в аккаунт</p>
-        <div>
+  return (
+    <div>
+      <p>войдите в аккаунт</p>
+      <div>
+        {error ? <div>{error}</div> : null}
+        <form action="" onSubmit={handlePush}>
           <input type="text" onChange={handleLogin} value={login} />
           <input type="text" onChange={handlePassword} value={password} />
-          <button onClick={handlePush}>войти</button>
-  
-        </div>
-        {sign ? <p>неверный логин или пароль</p> : null}
-        <div>
-          <Link to="/signUp">хочу зарегистрироваться</Link>
-        </div>
+          <button type="submit">войти</button>
+        </form>
       </div>
-    );
+      <div>
+        <Link to="/signUp">хочу зарегистрироваться</Link>
+      </div>
+    </div>
+  );
 };
 
 export default SignIn;

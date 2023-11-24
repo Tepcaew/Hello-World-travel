@@ -1,19 +1,16 @@
-
-.Header{
-    background-color: #1f1f1f;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    position: relative;
-    min-width: 100%;
-    width: 100%;
-    z-index: 1;
-    
+.Header {
+  background-color: #1f1f1f;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  min-width: 100%;
+  width: 100%;
+  z-index: 1;
 }
-.Header img{
-    height: 80px;
+.Header img {
+  height: 80px;
 }
-
 
 /* .vedeoBg{
     position: relative;
@@ -25,127 +22,135 @@
     align-items: center;
 } */
 
-.navigation{
-    display: flex;
-    justify-content: space-around;
-    width: 30%;
-
+.navigation {
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
 }
 
- a{
-    text-decoration: none;
-    color: aliceblue;
+a {
+  text-decoration: none;
+  color: aliceblue;
 }
-
 
 .Navigation2 {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 350px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 350px;
 }
 .Navigation2 p {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
-
-.Navigation2 img{
-    width: 30px;
-    height: 30px;
+.Navigation2 img {
+  width: 30px;
+  height: 30px;
 }
 
 .Navigation2 button {
-    
-        border-radius: 50px;
-        height: 40px;
-        width: 120px;
-        background-color: aliceblue;
-        color:black;
-     
+  border-radius: 50px;
+  height: 40px;
+  width: 120px;
+  background-color: aliceblue;
+  color: black;
 }
 
 .search {
-    display: inline-block;
-    background-color: #1f1f1f;
-    position: relative;
-    height: 35px;
-    width: 35px;
-    box-sizing: border-box;
-    margin: 0px 8px 7px 0px;
-    padding: 7px 9px 0px 9px;
-    border: 3px solid white; /* Replace with actual color value */
-    border-radius: 25px;
-    transition: all 200ms ease;
-    cursor: text;
+  display: inline-block;
+  background-color: #1f1f1f;
+  position: relative;
+  height: 35px;
+  width: 35px;
+  box-sizing: border-box;
+  margin: 0px 8px 7px 0px;
+  padding: 7px 9px 0px 9px;
+  border: 3px solid white; /* Replace with actual color value */
+  border-radius: 25px;
+  transition: all 200ms ease;
+  cursor: text;
 }
 
 .search:after {
-    content: "";
-    position: absolute;
-    width: 3px;
-    height: 20px;
-    right: -5px;
-    top: 21px; /* Replace with actual color value */
-    border-radius: 3px;
-    transform: rotate(-45deg);
-    transition: all 200ms ease;
-    background-color: white;
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 20px;
+  right: -5px;
+  top: 21px; /* Replace with actual color value */
+  border-radius: 3px;
+  transform: rotate(-45deg);
+  transition: all 200ms ease;
+  background-color: white;
 }
 
 .search.active,
 .search:hover {
-    width: 200px;
-    margin-right: 0px;
-    background-color: white;
+  width: 200px;
+  margin-right: 0px;
+  background-color: white;
 }
 
 .search.active:after,
 .search:hover:after {
-    height: 0px;
-    background-color:blue;
+  height: 0px;
+  background-color: blue;
 }
 
 .search input {
+  width: 100%;
+  border: none;
+  box-sizing: border-box;
+  font-family: Helvetica;
+  font-size: 15px;
+  background-color: pink;
+  color: inherit;
+  background: transparent;
+  outline-width: 0px;
+}
+
+.autocomplete {
+  position: absolute;
+  z-index: 300;
+  left: 0;
+  top: 50px;
+  width: 0px;
+  background-color: red;
+  list-style: none;
+  z-index: 1002;
+  max-height: 240px;
+  height: 0;
+}
+.autocomplete {
+  position: absolute;
+  z-index: 300;
+  left: 0;
+  top: 15px;
+  width: 150px;
+  background-color: red;
+  list-style: none;
+  z-index: 1002;
+  max-height: 240px;
+  height: auto;
+}
+
+.item {
+  background-color: red;
+  z-index: 105;
+}
+.user {
+  display: flex;
+  align-items: center;
+}
+.avatar{
+    border-radius: 100%;
+    height: 100%;
+}
+.userName {
+  color: white;
+}
+.logo{
     width: 100%;
-    border: none;
-    box-sizing: border-box;
-    font-family: Helvetica;
-    font-size: 15px;
-    background-color: pink;
-    color: inherit;
-    background: transparent;
-    outline-width: 0px;
-}
-
-.autocomplete{
-    position: absolute;
-    z-index: 300;
-    left: 0;
-    top: 50px;
-    width: 0px;
-    background-color: red;
-    list-style: none  ;
-    z-index: 1002;
-    max-height: 240px;
-    height: 0;
-}
-.autocomplete{
-    position: absolute;
-    z-index: 300;
-    left: 0;
-    top: 15px;
-    width: 150px;
-    background-color: red;
-    list-style: none  ;
-    z-index: 1002;
-    max-height: 240px;
-    height: auto;
-}
-
-
-.item{
-    background-color: red;
-    z-index: 105;
 }
