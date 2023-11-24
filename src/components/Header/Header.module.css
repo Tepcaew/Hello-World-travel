@@ -161,19 +161,19 @@
     height: 45px;
     width: 7%;
     border-radius: 20px;
-    background-color: rgb(62, 209, 238);
+    background-color:  rgba(2, 230, 255, 0.629);
     color: white;
 }
 .buttonEnter:hover, .buttonExit:hover {
     cursor: pointer;
-    background-color: rgb(1, 212, 254);
+    background-color:  rgb(2, 230, 255);
     color: rgb(9, 9, 9);
 }
 .buttonEnter{
     height: 45px;
     width: 100%;
     border-radius: 20px;
-    background-color: rgb(62, 209, 238);
+    background-color: rgba(2, 230, 255, 0.629);
     color: white;
 }
 .buttonEnterLink{

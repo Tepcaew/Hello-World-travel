@@ -4,6 +4,8 @@ import Guides from "../guides/Guides";
 import { useDispatch, useSelector } from "react-redux";
 import TourCard from "../Tours/TourCard";
 import { getTours } from "../../features/toursSlice";
+import samolet from "../../assets/samolet.png"
+import ReservationTour from "./Reservation/ReservationTour";
 
 const Body = () => {
   const tours = useSelector((state) => state.tours.tours);
@@ -15,15 +17,14 @@ const Body = () => {
   return (
     <div className={styles.container}>
       <div className={styles.text1}>
-        <p className={styles.p1}>Туры по России</p>
-        <p className={styles.p2}>с Hello, World!</p>
+        <p className={styles.p1}>Туры по России с <span className={styles.helloworld}>Hello, World!</span> </p>
+        <img src={samolet} alt="samolet" className={styles.samolet}/>
       </div>
       <div className={styles.text2}>
-        <p>
+        
           Трёхдневные авторские туры из Грозного для групп и подбор
           индивидуальных маршрутов - испытайте новые впечатления от пешего
           похода, сплава на байдарках или поездки по холмам на джипах.
-        </p>
       </div>
         <h2 className={styles.text3}>Список туров на 2023 год</h2>
       <div className={styles.cardsContainer} >
@@ -46,6 +47,7 @@ const Body = () => {
         </div>
       </div>
       <Guides />
+      <ReservationTour/>
     </div>
   );
 };

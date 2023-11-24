@@ -10,7 +10,7 @@ const Footer = () => {
                 <Link to="/tours"> Туры</Link>
                 <Link to="/excursion"> Экскурсии</Link>
                 <Link to="/contacts"> Контакты</Link>
-                <a href="#"> WhatsApp</a>
+                <Link to="/help"> Помощь</Link>
             </div>
             
             <img src={logo} className={styles.footerLogo}/>

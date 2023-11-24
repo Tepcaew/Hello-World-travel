@@ -67,30 +67,4 @@ padding-bottom: 80px;
     width: 50px;
     height: 50px;
 }
-.application{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction:column;
-}
 
-.applicationContent div{
-    text-align: center;
-}
-
-
-
- input{
-    width: 350px;
-}
-.application button{
-    color: aliceblue;
-    background-color: #010101;
-    border-radius: 25px;
-    height: 50px;
-    width: 140px;
-    margin-top: 50px;
-}
-.pt{
-    color: rgb(253, 110, 8);
-}
