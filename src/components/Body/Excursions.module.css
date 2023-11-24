@@ -59,7 +59,7 @@
     display: inline-block; /* Строчно-блочный элемент */
     overflow: hidden; /* Скрываем всё за контуром */
     height: 500px;
-    z-index: 100;
+
    }
    .excursionImage{
     transition: 1s; /* Время эффекта */
@@ -69,10 +69,7 @@
     transform: scale(1.2); /* Увеличиваем масштаб */
     z-index: 101;
    }
-.aad{
-  background-color: lightslategrey;
-  margin: 0;
-}
+
 
    
 

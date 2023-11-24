@@ -14,7 +14,7 @@
 .categoryName:hover{
     border-bottom: 1px solid #1f1f1f;
     padding: 0px 15px 4px 15px;
-    transform: translateY(-10px);
+    transform: translateY(-5px);
     transition: 1s;
     margin: -5;
 }
