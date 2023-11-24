@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import styles from "./Header.module.css";
-import watsApp from "../../assets/icons8-whatsapp-48 (1).png";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getExcursion } from "../../features/excursionSlice";
 import { getTours } from "../../features/toursSlice";
 import { exits, getUserById } from "../../features/applicationSlice";
+import logo from "../../assets/helloworld.png";
 const Header = () => {
   const dispatch = useDispatch();
   const token = useSelector((state) => state.application.token);
@@ -37,13 +37,11 @@ const Header = () => {
 
   return (
     <div className={styles.Header}>
-      <Link to="/">
-        <img
-          className={styles.logo}
-          src="https://static.tildacdn.com/tild3932-3539-4037-a465-346232333537/___.png"
-          alt="logo"
-        />
-      </Link>
+      <div className={styles.logoBlock}>
+        <Link to="/">
+          <img className={styles.logo} src={logo} alt="logo" />
+        </Link>
+      </div>
       {user?.avatar ? (
         <div className={styles.user}>
           <img
@@ -54,12 +52,21 @@ const Header = () => {
           <h3 className={styles.userName}>{user.login}</h3>
         </div>
       ) : (
-        <h3 className={styles.userName}>Гостевой режим</h3>
+        <div className={styles.user}>
+          <h3 className={styles.userName}>Гостевой</h3>
+          <h3 className={styles.userName}>режим</h3>
+        </div>
       )}
       <div className={styles.navigation}>
-        <Link to="/tours">Туры</Link>
-        <Link to="/excursion">Экскурсии</Link>
-        <Link to="/contacts">Контакты</Link>
+        <Link to="/tours" className={styles.menuPoint}>
+          Туры
+        </Link>
+        <Link to="/excursion" className={styles.menuPoint}>
+          Экскурсии
+        </Link>
+        <Link to="/contacts" className={styles.menuPoint}>
+          Контакты
+        </Link>
       </div>
 
       <div className={styles.Navigation2}>
@@ -99,11 +106,11 @@ const Header = () => {
         </div>
       </div>
       {token ? (
-        <button className={styles.buttonEnter} onClick={handleExit}>
+        <button className={styles.buttonExit} onClick={handleExit}>
           Выйти
         </button>
       ) : (
-        <Link to="/login">
+        <Link to="/login" className={styles.buttonEnterLink}>
           <button className={styles.buttonEnter}>Войти</button>
         </Link>
       )}

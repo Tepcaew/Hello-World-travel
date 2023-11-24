@@ -4,7 +4,6 @@
     align-items: center;
     padding: 20px;
     background-color: #1f1f1f;
-    height: 450px;
     flex-direction: column;
     position: relative;
     z-index: 1;
@@ -31,8 +30,7 @@
   }
 
   .footer img{
-    height: 150px;
-    width: 180px;
+    width: 30%;
   }
 
   span{
