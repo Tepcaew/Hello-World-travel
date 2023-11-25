@@ -15,9 +15,13 @@ import ReservationTour from "./components/Body/Reservation/ReservationTour";
 import styles from "../src/components/Body/Excursions.module.css";
 import Body from "./components/Body/body";
 import { useSelector } from "react-redux";
+import SignUpAdmin from "./components/Sign/Admin/SignUpAdmin";
+import SignInAdmin from "./components/Sign/Admin/SignInAdmin";
 
 function App() {
   const token = useSelector((state) => state.application.token);
+  const user = useSelector((state) => state.application.user);
+
   return (
     <div className={styles.aad}>
       <Header />
@@ -31,7 +35,22 @@ function App() {
         ) : (
           <>
             <Route path="/login" element={<SignIn />} />
+            <Route path="/loginAdmin" element={<SignInAdmin />} />
             <Route path="/signup" element={<SignUp />} />
+            <Route path="/signupadmin" element={<SignUpAdmin />} />
+          </>
+        )}
+        {user.admin ? (
+          <>
+            <Route path="/loginAdmin" element={<Navigate to="/" />} />
+            <Route path="/signupadmin" element={<Navigate to="/" />} />
+          </>
+        ) : (
+          <>
+            <Route path="/login" element={<SignIn />} />
+            <Route path="/loginAdmin" element={<SignInAdmin />} />
+            <Route path="/signup" element={<SignUp />} />
+            <Route path="/signupadmin" element={<SignUpAdmin />} />
           </>
         )}
         <Route path="/" element={<Body />} />
