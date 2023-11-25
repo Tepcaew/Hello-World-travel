@@ -18,13 +18,12 @@ import { useSelector } from "react-redux";
 import SignUpAdmin from "./components/Sign/Admin/SignUpAdmin";
 import SignInAdmin from "./components/Sign/Admin/SignInAdmin";
 import Sidebar from "./components/Sidebar/Sidebar";
+import BroneTour from "./components/Brone/BroneTour";
 
 function App() {
   const token = useSelector((state) => state.application.token);
   const user = useSelector((state) => state.application.user);
-  const sidebar = useSelector((state) => state.sidebarReducer.sidebar);
-  console.log(sidebar);
-
+  const sidebar = useSelector((state) => state.justReducer.sidebar);
   return (
     <div className={styles.aad}>
       <Header />
@@ -48,12 +47,14 @@ function App() {
                 <Route path="/loginAdmin" element={<SignInAdmin />} />
                 <Route path="/signup" element={<SignUp />} />
                 <Route path="/signupadmin" element={<SignUpAdmin />} />
+                <Route path="/brone" element={<Navigate to="/login" />} />
               </>
             )}
             {user.admin ? (
               <>
                 <Route path="/loginAdmin" element={<Navigate to="/" />} />
                 <Route path="/signupadmin" element={<Navigate to="/" />} />
+                <Route path="/brone" element={<Navigate to="/login" />} />
               </>
             ) : (
               <>
@@ -61,6 +62,7 @@ function App() {
                 <Route path="/loginAdmin" element={<SignInAdmin />} />
                 <Route path="/signup" element={<SignUp />} />
                 <Route path="/signupadmin" element={<SignUpAdmin />} />
+                <Route path="/brone" element={<BroneTour />} />
               </>
             )}
             <Route path="/" element={<Body />} />
@@ -73,6 +75,7 @@ function App() {
             <Route path="/contacts" element={<Contacts />} />
             <Route path="/excursion" element={<Excursions />} />
             <Route path="/excursion/:id" element={<OneExcursion />} />
+            <Route path="/brone" element={<BroneTour />} />
           </Routes>
         </div>
       </div>

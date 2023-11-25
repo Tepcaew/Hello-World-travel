@@ -1,8 +1,9 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getTours } from "../../features/toursSlice";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import styles from "./Tours.module.css";
+import { broneTour } from "../../features/justReducer";
 
 const OneTour = () => {
   const dispatch = useDispatch();
@@ -10,11 +11,14 @@ const OneTour = () => {
 
   const { id } = useParams();
   const oneTour = tours?.find((tour) => tour._id === id);
-  console.log(id)
+  const handleTourId = (e) => {
+    e.preventDefault();
+    dispatch(broneTour(id));
+  };
+
   useEffect(() => {
     dispatch(getTours());
   }, [dispatch]);
-  console.log(oneTour);
   return (
     <>
       <img
@@ -32,6 +36,7 @@ const OneTour = () => {
             allowFullScreen
             frameBorder={0}
           ></iframe>
+
           <div className={styles.oneTourText}>
             <h2 className={styles.oneTourName}>{oneTour?.name} </h2>
             <div className={styles.oneTourDescr}>{oneTour?.descr}</div>
@@ -49,6 +54,12 @@ const OneTour = () => {
             </div>
           </div>
         </div>
+
+        <button className={styles.broneButton} onClick={handleTourId}>
+          <Link to="/brone" className={styles.broneLink}>
+            Забронировать тур
+          </Link>
+        </button>
         <h1>Программа тура</h1>
         <ul>
           <li>

@@ -149,3 +149,14 @@
 .tourCards:hover {
   box-shadow: rgba(32, 35, 34, 0.812) -1px -1px 30px;
 }
+.broneLink{
+  text-decoration: none;
+  color: white;
+}
+.broneButton{
+  margin: 10px auto;
+  border-radius: 20px;
+  background-color: rgb(1, 186, 214);
+  display: flex;
+  align-items: center;
+}

@@ -76,6 +76,7 @@
   .allMain{
     display: flex;
     position: relative;
+    min-height: 100vh;
   }
   .sidebar{
     position: fixed;
