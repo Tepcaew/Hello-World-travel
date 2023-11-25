@@ -4,31 +4,10 @@ import { YMaps, Map } from "react-yandex-maps";
 import whatsApp from "../../assets/whats.png";
 import telegramm from "../../assets/telegramm.png";
 import facebook from "../../assets/facebook.png";
-import vk from "../../assets/vk.png";
-import youTube from "../../assets/youTube.png";
-import { useDispatch } from "react-redux";
-import { addOrders } from "../../features/ordersSlice";
+import ReservationTour from "./Reservation/ReservationTour";
 
 const Contacts = () => {
-  const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
-  const [message, setMessage] = useState("");
-
-  const dispatch = useDispatch();
-
-  const handleSetName = (e) => {
-    setName(e.target.value);
-  };
-  const handleSetPhone = (e) => {
-    setPhone(e.target.value);
-  }
-  const handleSetMessage = (e) => {
-    setMessage(e.target.value);
-}
-
-  const handleAddorders = () => {
-    dispatch(addOrders({name, phone, message }));
-  };
+ 
 
   return (
     <div className={styles.contactsContainer}>
@@ -101,39 +80,7 @@ const Contacts = () => {
           </YMaps>
         </div>
       </div>
-      <div className={styles.botoomIcon}>
-        <a href="#">
-          <img src={telegramm} alt="" />
-        </a>
-        <a href="#">
-          <img src={facebook} alt="" />
-        </a>
-        <a href="#">
-          <img src={vk} alt="" />
-        </a>
-        <a href="#">
-          <img src={youTube} alt="" />
-        </a>
-      </div>
-      <div className={styles.application}>
-        <div className={styles.applicationContent}>
-          <div>
-            <h2>Оставьте заявку</h2>
-            <p>Заполните заявку и мы свяжемся с Вами!</p>
-          </div>
-          <p>имя</p>
-          <input value={name} onChange={handleSetName} type="text" />
-          <p>телефон</p>
-          <input value={phone} onChange={handleSetPhone} type="text" />
-          <p>сообщение</p>
-          <input value={message} onChange={handleSetMessage} type="text" />
-        </div>
-        <button onClick={handleAddorders}>отправить</button>
-        <p className={styles.pt}>
-          Нажимая на кнопку "Отправить", Вы соглашаетесь с условиями и
-          пользовательским соглашением.
-        </p>
-      </div>
+      <ReservationTour/>
     </div>
   );
 };

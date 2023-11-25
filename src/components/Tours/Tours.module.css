@@ -17,6 +17,7 @@
   color: white;
   border-radius: 20px;
   box-shadow: 2px 4px 14px 3px rgba(34, 60, 80, 0.2);
+  text-decoration: none;
 }
 .tourCard:hover {
   box-shadow: rgba(32, 35, 34, 0.812) -1px -1px 30px;
@@ -143,6 +144,7 @@
   color: white;
   border-radius: 20px;
   box-shadow: 2px 4px 14px 3px rgba(34, 60, 80, 0.2);
+  text-decoration: none;
 }
 .tourCards:hover {
   box-shadow: rgba(32, 35, 34, 0.812) -1px -1px 30px;

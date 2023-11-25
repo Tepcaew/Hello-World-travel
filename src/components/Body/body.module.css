@@ -1,178 +1,95 @@
-
 .container {
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    max-width: 1200px;
-    padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0;
 }
 
-.text1{
-    font-size: 64px;
-    line-height: 1.23;
-    font-family: 'Ubuntu',Arial,sans-serif;
-    font-weight: 600;
-    color: #000000;
-    margin-bottom: 40px;
-    box-sizing: content-box;
-    -webkit-font-smoothing: antialiased;
+.text1 {
+  font-size: 64px;
+  line-height: 1.23;
+  font-family: "Ubuntu", Arial, sans-serif;
+  font-weight: 600;
+  display: flex;
+  color: #000000;
+  margin: 20px auto;
+  box-sizing: content-box;
+  -webkit-font-smoothing: antialiased;
+  align-items: center;
+}
+.p1{
+    width: 36%;
+}
+.samolet{
+    width: 64%;
+    height: 100%;
+}
+.helloworld{
+    color: rgb(2, 230, 255);
 }
 
 .text2 {
-    font-family: 'Ubuntu',Arial,sans-serif;
-    color: black;
-    padding-bottom: 30px;
-    font-size: 28px;
-    line-height: 1.5;
-    font-weight: 300;
+  font-family: "Ubuntu", Arial, sans-serif;
+  color: black;
+  padding-bottom: 30px;
+  font-size: 28px;
+  line-height: 1.5;
+  font-weight: 300;
 }
 
 .text3 {
-    padding-top: 50px;
-    padding-bottom: 14px;
-    font-size: 40px;
-    font-family: 'Ubuntu',Arial,sans-serif;
-    color: #000000;
-    text-align: center;
+  padding-top: 50px;
+  padding-bottom: 14px;
+  font-size: 40px;
+  font-family: "Ubuntu", Arial, sans-serif;
+  color: #000000;
+  text-align: center;
 }
 
-.tourp1 {
-    font-size: 50px;
-    color: white;
-}
-
-.tourp2 {
-    font-size: 32px;
-    color: rgb(224, 204, 11);
-    margin-top: 30px;
-}
-
-.contText {
-    margin-top: 30px;
-    color: white;
-    font-size: 22px;
-    line-height: 1.55;
-    font-family: 'Ubuntu',Arial,sans-serif;
-    font-weight: 300;
-}
-
-.contTour {
-    background-color: #8f8f8f;
-    position: relative;
-    padding: 20px 40px;
-    border-radius: 30px;
-    background-image: url(https://cdn2.tu-tu.ru/image/pagetree_node_data/1/5ad6370690246cfa0d7c4d1f1a29fb13/);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.buttonTour {
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center;
-    background: none;
-    border: 0 none;
-    height: 45px;
-    width: 150px;
-    font-size: 14px;
-    padding-left: 30px;
-    padding-right: 30px;
-    color: #ffffff;
-    background-color: #3ec2b7;
-    border-radius: 30px;
-}
-
-.price{
-    margin-top: 50px;
-    margin-bottom: 40px;
-}
-
-.contCart {
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    max-width: 1200px;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.bodyCart {
-    width: 50%;
-    background-color: #8f8f8f;
-    display: inline-block;
-    vertical-align: top;
-    padding: 20px 10px 0 10px;
-    box-sizing: border-box;
-    margin-top: 50px;
-    border-radius: 20px;
-    background-image: url(https://goodtimetravel.ru/wp-content/uploads/2016/02/chechnia-1.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.textCatr1{
-    margin: 30px 60px 30px 30px;
-    color: white;
-    font-family: 'Ubuntu',Arial,sans-serif;
-    font-weight: 600;
-    line-height: 1.35;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-}
-
-.cartText1 {
-    font-size: 28px;
-    margin-bottom: 30px;
-}
-
-.cartText2 {
-    font-size: 24px;
-    color: rgb(224, 204, 11);
-}
-
-.textCart2 {
-    font-size: 20px;
-    color: white;
-    margin: 0 30px 30px 30px;
-    line-height: 1.55;
-    font-family: 'Ubuntu',Arial,sans-serif;
-    font-weight: 300;
-    margin-top: 180px;
+.textCatr1 {
+  margin: 30px 60px 30px 30px;
+  color: white;
+  font-family: "Ubuntu", Arial, sans-serif;
+  font-weight: 600;
+  line-height: 1.35;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .contInfo {
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    max-width: 1200px;
-    padding: 0;
-    margin-top: 130px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0;
+  margin-top: 130px;
 }
 
 .contTextInfo {
-    margin-bottom: 40px;
-    text-align: center;
+  margin-bottom: 40px;
+  text-align: center;
 }
 
 .textInfo1 {
-    font-size: 42px;
-    line-height: 1.23;
-    margin-bottom: 40px;
-    font-family: 'Ubuntu',Arial,sans-serif;
-    font-weight: 600;
-    color: #000000;
+  font-size: 42px;
+  line-height: 1.23;
+  margin-bottom: 40px;
+  font-family: "Ubuntu", Arial, sans-serif;
+  font-weight: 600;
+  color: #000000;
 }
 
 .textInfo2 {
-    font-size: 24px;
-    line-height: 1.5;
-    font-family: 'Ubuntu',Arial,sans-serif;
-    color: #000000;
+  font-size: 24px;
+  line-height: 1.5;
+  font-family: "Ubuntu", Arial, sans-serif;
+  color: #000000;
 }
 
-.cardsContainer{
-    display: flex;
-    flex-wrap: wrap;
+.cardsContainer {
+  display: flex;
+  flex-wrap: wrap;
 }
