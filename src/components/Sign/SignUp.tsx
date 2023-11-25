@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { authSignUp } from "../../features/applicationSlice";
 import { Link } from "react-router-dom";
-import styles from "./Sign.module.css"
+import styles from "./Sign.module.css";
 
 const SignUp = () => {
-  const error = useSelector((state) => state.application.error)
+  const error = useSelector((state) => state.application.error);
   const [login, setLogin] = useState("");
   const [password, setPassword] = useState("");
   const [image, setImage] = useState("");
@@ -31,17 +31,21 @@ const SignUp = () => {
   };
   return (
     <>
-      <div className={styles.main}>
-        {error ? <div>{error}</div> : null}
-        <form action="" onSubmit={handleSignUp}>
-          <input type="text" value={login} onChange={handleLogin} />
-          <input type="text" value={password} onChange={handlePassword} />
-          <input type="file" onChange={handleImage} />
-          <button>зарегистрироваться</button>
-        </form>
-      </div>
-      <div>
-        <Link to="/login">у меня уже есть аккаунт</Link>
+      <div className={styles.container}>
+        <div className={styles.content}>
+          {error ? <div>{error}</div> : null}
+          <p className={styles.title}>Регистрация</p>
+          <form action="" onSubmit={handleSignUp}>
+            <input type="text" value={login} onChange={handleLogin} />
+            <input type="text" value={password} onChange={handlePassword} />
+            <input type="file" onChange={handleImage}  className={styles.inputFile}/>
+            <button>зарегистрироваться</button>
+
+          </form>
+        </div>
+        <div className={styles.sign}>
+          <Link to="/login">у меня уже есть аккаунт</Link>
+        </div>
       </div>
     </>
   );
