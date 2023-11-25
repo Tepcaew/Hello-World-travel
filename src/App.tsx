@@ -11,13 +11,13 @@ import SignUp from "./components/Sign/SignUp";
 import Help from "./components/Body/BlockHelp/Help";
 import Reviews from "./components/Body/Reviews/Reviews";
 import ReservationTour from "./components/Body/Reservation/ReservationTour";
-
 import styles from "../src/components/Body/Excursions.module.css";
 import Body from "./components/Body/body";
 import { useSelector } from "react-redux";
 import SignUpAdmin from "./components/Sign/Admin/SignUpAdmin";
 import SignInAdmin from "./components/Sign/Admin/SignInAdmin";
 import Sidebar from "./components/Sidebar/Sidebar";
+import Orders from "./orders/Orders";
 import BroneTour from "./components/Brone/BroneTour";
 
 function App() {
@@ -75,6 +75,7 @@ function App() {
             <Route path="/contacts" element={<Contacts />} />
             <Route path="/excursion" element={<Excursions />} />
             <Route path="/excursion/:id" element={<OneExcursion />} />
+            <Route path="/orders" element={<Orders />} />
             <Route path="/brone" element={<BroneTour />} />
           </Routes>
         </div>

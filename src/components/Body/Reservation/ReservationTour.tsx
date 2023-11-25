@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styles from "./Reservation.module.css";
 import { addOrders } from "../../../features/ordersSlice";
 import { useDispatch } from "react-redux";
+import photoNaBac from "../../../assets/bacraund.jpg"
 const ReservationTour = () => {
     const [name, setName] = useState("");
     const [phone, setPhone] = useState("");

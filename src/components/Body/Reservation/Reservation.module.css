@@ -30,14 +30,23 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  background-image:url('https://дивногорск-ое.рф/wp-content/uploads/2022/07/s1200_0.jpg');
+  border-radius: 20px;
+  margin-bottom: 30px;
 }
 
 .applicationContent div {
   text-align: center;
 }
 
+/* .application img{
+} */
+
 input {
   width: 350px;
+  border-radius: 20px;
+  border-color: transparent;
+  height: 30px;
 }
 .application button {
   color: aliceblue;

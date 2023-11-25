@@ -4,7 +4,7 @@ import styles from "./Categories.module.css";
 import { getCategories } from "../../features/categoriesSlice";
 import Category from "./Category";
 
-const Categories = () => {
+  const Categories = () => {
   const dispatch = useDispatch();
   const categories = useSelector((state) => state.categories.categories);
   useEffect(() => {
