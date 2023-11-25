@@ -29,7 +29,7 @@ const SignIn = () => {
         <form action="" onSubmit={handlePush}>
           <input type="text" onChange={handleLogin} value={login} />
           <input type="text" onChange={handlePassword} value={password} />
-          <button type="submit">войти</button>
+          <button type="submit" className={styles.btn}>войти</button>
         </form>
         <div className={styles.link}>
         <p className={styles.sign}><Link to="/signUp" >хочу зарегистрироваться</Link></p>

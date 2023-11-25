@@ -9,12 +9,16 @@
     text-decoration: none;
 }
 .categoryName{
-    padding: 0px 15px 4px 15px;
+    padding: 20px 15px 4px 15px;
+    font-size: 17px;
 }
 .categoryName:hover{
     border-bottom: 1px solid #1f1f1f;
     padding: 0px 15px 4px 15px;
-    transform: translateY(-5px);
+    transform: translateY(13px);
     transition: 1s;
     margin: -5;
+}
+.categoryName::before{
+    transition: ease-in-out 1250ms cubic-bezier(0.19, 1, 0.22, 1);
 }
