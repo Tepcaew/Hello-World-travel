@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { authSignIn } from "../../features/applicationSlice";
+import { authSignIn } from "../../../features/applicationSlice";
 
-const SignIn = () => {
+const SignInAdmin = () => {
   const error = useSelector((state) => state.application.error);
   const [login, setLogin] = useState("");
   const [password, setPassword] = useState("");
@@ -22,7 +22,7 @@ const SignIn = () => {
 
   return (
     <div>
-      <p>войдите в аккаунт</p>
+      <p>Войти как администратор</p>
       <div>
         {error ? <div>{error}</div> : null}
         <form action="" onSubmit={handlePush}>
@@ -32,11 +32,10 @@ const SignIn = () => {
         </form>
       </div>
       <div>
-        <Link to="/signUp">хочу зарегистрироваться</Link>
-        <Link to="/loginAdmin">войти как администратор</Link>
+        <Link to="/signUpAdmin">хочу зарегистрироваться</Link>
       </div>
     </div>
   );
 };
 
-export default SignIn;
+export default SignInAdmin;
