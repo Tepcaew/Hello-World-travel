@@ -5,7 +5,9 @@ const initialState = {
   signinUp: false,
   signinIn: false,
   token: localStorage.getItem("token"),
-  user: {},
+  user: {
+    tours: [],
+  },
 };
 
 export const authSignUp = createAsyncThunk(
@@ -79,6 +81,32 @@ export const getUserById = createAsyncThunk(
   }
 );
 
+export const addTours = createAsyncThunk(
+  "user/tour",
+  async ({ id, date, tour }, thunkAPI) => {
+    try {
+      const res = await fetch("http://localhost:3077/user", {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${thunkAPI.getState().application.token}`,
+        },
+        body: JSON.stringify({ id, date, tour }),
+      });
+
+      const user = await res.json();
+      console.log(user);
+
+      if (user.error) {
+        return thunkAPI.rejectWithValue(user.error);
+      }
+      return [id, date, tour];
+    } catch (error) {
+      thunkAPI.rejectWithValue(error);
+    }
+  }
+);
+
 export const exits = createAsyncThunk("exit/user", async (_, thunkAPI) => {
   return localStorage.clear();
 });
@@ -120,6 +148,9 @@ export const appliactionSlice = createSlice({
       })
       .addCase(getUserById.fulfilled, (state, action) => {
         state.user = action.payload;
+      })
+      .addCase(addTours.fulfilled, (state, action) => {
+        state.user.tours.concat(action.payload);
       });
   },
 });

@@ -7,7 +7,7 @@ import { getTours } from "../../features/toursSlice";
 import { exits, getUserById } from "../../features/applicationSlice";
 import logo from "../../assets/helloworld.png";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import { sidebarOpen } from "../../features/sidebarReducer";
+import { sidebarOpen } from "../../features/justReducer";
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -42,10 +42,8 @@ const Header = () => {
   return (
     <div className={styles.Header}>
       <a
-        href="#"
         onClick={handleSidebar}
         className={styles.sidebarPoint}
-        class="nav-link text-white fs-5"
         aria-current="page"
       >
         <i className="bi bi-list"></i>
