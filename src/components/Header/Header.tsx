@@ -6,15 +6,15 @@ import { getExcursion } from "../../features/excursionSlice";
 import { getTours } from "../../features/toursSlice";
 import { exits, getUserById } from "../../features/applicationSlice";
 import logo from "../../assets/helloworld.png";
+import "bootstrap-icons/font/bootstrap-icons.css";
+import { sidebarOpen } from "../../features/sidebarReducer";
+
 const Header = () => {
   const dispatch = useDispatch();
   const token = useSelector((state) => state.application.token);
   const user = useSelector((state) => state.application.user);
   const tours = useSelector((state) => state.tours.tours);
   const excursion = useSelector((state) => state.excursion.excursion);
-  const handleExit = () => {
-    dispatch(exits());
-  };
 
   const all = tours.concat(excursion);
 
@@ -24,6 +24,10 @@ const Header = () => {
   const filtered = all.filter((item) => {
     return item.name.toLowerCase().includes(value.toLowerCase());
   });
+
+  const handleSidebar = () => {
+    dispatch(sidebarOpen());
+  };
 
   useEffect(() => {
     dispatch(getExcursion(), getTours());
@@ -37,26 +41,20 @@ const Header = () => {
 
   return (
     <div className={styles.Header}>
+      <a
+        href="#"
+        onClick={handleSidebar}
+        className={styles.sidebarPoint}
+        class="nav-link text-white fs-5"
+        aria-current="page"
+      >
+        <i className="bi bi-list"></i>
+      </a>
       <div className={styles.logoBlock}>
         <Link to="/">
           <img className={styles.logo} src={logo} alt="logo" />
         </Link>
       </div>
-      {user?.avatar ? (
-        <div className={styles.user}>
-          <img
-            className={styles.avatar}
-            src={`http://localhost:3077/${user?.avatar}`}
-            alt=""
-          />
-          <h3 className={styles.userName}>{user.login}</h3>
-        </div>
-      ) : (
-        <div className={styles.user}>
-          <h3 className={styles.userName}>Гостевой</h3>
-          <h3 className={styles.userName}>режим</h3>
-        </div>
-      )}
       <div className={styles.navigation}>
         <Link to="/tours" className={styles.menuPoint}>
           Туры
@@ -105,15 +103,6 @@ const Header = () => {
           </div>
         </div>
       </div>
-      {token ? (
-        <button className={styles.buttonExit} onClick={handleExit}>
-          Выйти
-        </button>
-      ) : (
-        <Link to="/login" className={styles.buttonEnterLink}>
-          <button className={styles.buttonEnter}>Войти</button>
-        </Link>
-      )}
     </div>
   );
 };
