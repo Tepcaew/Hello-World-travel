@@ -3,21 +3,21 @@ import styles from "./Orders.module.css"
 
 const Order = ({name, phone, message}) =>{
     return(
+        <div className={styles.container}>
         <div className={styles.orderTable}>
-            <table>
-        <tr>
-          <th>имя</th>
-          <td>{name}</td>
-        </tr>
-        <tr>
-          <th>номер телефона</th>
-          <td>{phone}</td>
-        </tr>
-        <tr>
-          <th>сообщение</th>
-          <td>{message}</td>
-        </tr>
-      </table>
+                        <div className={styles.infoOrd}>
+                            <div>
+                        <h4>имя</h4>
+                            <p >{name}</p>
+                            <h4>телефон</h4>
+                            <p >{phone}</p>
+                            <h4>сообщение</h4>
+                            <p >{message}</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+
         </div>
     )
 }

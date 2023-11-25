@@ -26,7 +26,6 @@ const ReservationTour = () => {
   return (
     <div className={styles.application}>
       <div className={styles.applicationContent}>
-        {/* <img src={photoNaBac} alt="" /> */}
         <div>
           <h2>Оставьте заявку</h2>
           <p>Заполните заявку и мы свяжемся с Вами!</p>

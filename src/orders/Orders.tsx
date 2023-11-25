@@ -1,13 +1,14 @@
 import { getOrders } from "../features/ordersSlice";
 import styles from "./Orders.module.css"
 import Order from "./Order";
-import { useDispatch, useSelector } from "react-redux";
+import {  useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 
 
 
 const Orders = () => {
     const dispatch = useDispatch()
+
     const orders = useSelector((state) => state.order.orders)
     useEffect(() =>{
         dispatch(getOrders())
