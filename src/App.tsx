@@ -17,6 +17,7 @@ import Body from "./components/Body/body";
 import { useSelector } from "react-redux";
 import SignUpAdmin from "./components/Sign/Admin/SignUpAdmin";
 import SignInAdmin from "./components/Sign/Admin/SignInAdmin";
+import Orders from "./orders/Orders";
 
 function App() {
   const token = useSelector((state) => state.application.token);
@@ -63,6 +64,7 @@ function App() {
         <Route path="/contacts" element={<Contacts />} />
         <Route path="/excursion" element={<Excursions />} />
         <Route path="/excursion/:id" element={<OneExcursion />} />
+        <Route path="/orders" element={<Orders />} />
       </Routes>
 
       <Footer />

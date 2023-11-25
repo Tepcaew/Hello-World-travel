@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styles from "./Reservation.module.css";
 import { addOrders } from "../../../features/ordersSlice";
 import { useDispatch } from "react-redux";
+import photoNaBac from "../../../assets/bacraund.jpg"
 const ReservationTour = () => {
     const [name, setName] = useState("");
     const [phone, setPhone] = useState("");
@@ -25,6 +26,7 @@ const ReservationTour = () => {
   return (
     <div className={styles.application}>
       <div className={styles.applicationContent}>
+        {/* <img src={photoNaBac} alt="" /> */}
         <div>
           <h2>Оставьте заявку</h2>
           <p>Заполните заявку и мы свяжемся с Вами!</p>

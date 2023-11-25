@@ -36,8 +36,14 @@
   text-align: center;
 }
 
+/* .application img{
+} */
+
 input {
   width: 350px;
+  border-radius: 20px;
+  border-color: transparent;
+  height: 30px;
 }
 .application button {
   color: aliceblue;
