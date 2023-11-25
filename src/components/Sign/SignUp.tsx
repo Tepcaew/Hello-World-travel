@@ -39,7 +39,7 @@ const SignUp = () => {
             <input type="text" value={login} onChange={handleLogin} />
             <input type="text" value={password} onChange={handlePassword} />
             <input type="file" onChange={handleImage}  className={styles.inputFile}/>
-            <button className={styles.btn}>зарегистрироваться</button>
+            <button>зарегистрироваться </button>
 
           </form>
         </div>
