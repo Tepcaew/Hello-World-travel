@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { authSignIn } from "../../features/applicationSlice";
+import styles from "./Sign.module.css";
 
 const SignIn = () => {
   const error = useSelector((state) => state.application.error);
@@ -21,19 +22,19 @@ const SignIn = () => {
   };
 
   return (
-    <div>
-      <p>войдите в аккаунт</p>
-      <div>
+    <div className={styles.container}>
+      <div className={styles.content}>
+        <p className={styles.title}>Войдите в аккаунт</p>
         {error ? <div>{error}</div> : null}
         <form action="" onSubmit={handlePush}>
           <input type="text" onChange={handleLogin} value={login} />
           <input type="text" onChange={handlePassword} value={password} />
           <button type="submit">войти</button>
         </form>
-      </div>
-      <div>
-        <Link to="/signUp">хочу зарегистрироваться</Link>
-        <Link to="/loginAdmin">войти как администратор</Link>
+        <div className={styles.link}>
+        <p className={styles.sign}><Link to="/signUp" >хочу зарегистрироваться</Link></p>
+          <p className={styles.sign}><Link to="/loginAdmin">войти как администратор</Link></p>
+        </div>
       </div>
     </div>
   );
