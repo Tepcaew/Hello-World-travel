@@ -76,7 +76,7 @@ const Sidebar = () => {
                   <ul className="nav nav-pills flex-column">
                     <li className="nav-item text-white fs-4 my-1">
                       <a
-                        href="#"
+                        href="/mytours"
                         className="nav-link text-white fs-5"
                         aria-current="page"
                       >

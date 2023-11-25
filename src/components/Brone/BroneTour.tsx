@@ -4,15 +4,16 @@ import styles from "./BroneTour.module.css";
 
 import "react-datepicker/dist/react-datepicker.css";
 import { useDispatch, useSelector } from "react-redux";
+import { addTours } from "../../features/applicationSlice";
 
 const BroneTour = () => {
   const dispatch = useDispatch();
   const tours = useSelector((state) => state.tours.tours);
-  const id = useSelector((state) => state.justReducer.broneTour);
+  const tour = useSelector((state) => state.justReducer.broneTour);
+  const id = useSelector((state) => state.application.user._id);
+  const oneTour = tours?.find((item) => item._id === tour);
 
-  const oneTour = tours?.find((tour) => tour._id === id);
-
-  const [date, setDate] = useState(new Date());
+  const [dates, setDate] = useState(new Date());
   const [startDate, setStartDate] = useState();
   const [endDate, setEndDate] = useState();
 
@@ -21,6 +22,12 @@ const BroneTour = () => {
     setStartDate(startDate);
     setEndDate(endDate);
   };
+  const date = [startDate, endDate];
+  
+  const handleAddTour = () => {
+    dispatch(addTours({ id, date, tour }));
+  };
+console.log(id, date, tour);
 
   return (
     <div className={styles.brone}>
@@ -36,21 +43,20 @@ const BroneTour = () => {
         </div>
       </div>
       <div>
-      <h3>2. Теперь выберите даты:</h3>
-      <DatePicker
-        className={styles.date}
-        selected={date}
-        onChange={handleChange}
-        startDate={startDate}
-        endDate={endDate}
-        selectsRange
-      />
+        <h3>2. Теперь выберите даты:</h3>
+        <DatePicker
+          className={styles.date}
+          selected={dates}
+          onChange={handleChange}
+          startDate={startDate}
+          endDate={endDate}
+          selectsRange
+        />
       </div>
       <div>
         <h3>3. Последний шаг</h3>
-      <button>Отправить на подтверждение</button>
+        <button onClick={handleAddTour}>Отправить на подтверждение</button>
       </div>
-      
     </div>
   );
 };
