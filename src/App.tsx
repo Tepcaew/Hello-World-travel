@@ -17,53 +17,65 @@ import Body from "./components/Body/body";
 import { useSelector } from "react-redux";
 import SignUpAdmin from "./components/Sign/Admin/SignUpAdmin";
 import SignInAdmin from "./components/Sign/Admin/SignInAdmin";
+import Sidebar from "./components/Sidebar/Sidebar";
 
 function App() {
   const token = useSelector((state) => state.application.token);
   const user = useSelector((state) => state.application.user);
+  const sidebar = useSelector((state) => state.sidebarReducer.sidebar);
+  console.log(sidebar);
 
   return (
     <div className={styles.aad}>
       <Header />
+      <div className={styles.allMain}>
+        {sidebar ? (
+          <div className={styles.sidebar}>
+            <Sidebar />
+          </div>
+        ) : null}
 
-      <Routes>
-        {token ? (
-          <>
-            <Route path="/login" element={<Navigate to="/" />} />
-            <Route path="/signup" element={<Navigate to="/" />} />
-          </>
-        ) : (
-          <>
-            <Route path="/login" element={<SignIn />} />
-            <Route path="/loginAdmin" element={<SignInAdmin />} />
-            <Route path="/signup" element={<SignUp />} />
-            <Route path="/signupadmin" element={<SignUpAdmin />} />
-          </>
-        )}
-        {user.admin ? (
-          <>
-            <Route path="/loginAdmin" element={<Navigate to="/" />} />
-            <Route path="/signupadmin" element={<Navigate to="/" />} />
-          </>
-        ) : (
-          <>
-            <Route path="/login" element={<SignIn />} />
-            <Route path="/loginAdmin" element={<SignInAdmin />} />
-            <Route path="/signup" element={<SignUp />} />
-            <Route path="/signupadmin" element={<SignUpAdmin />} />
-          </>
-        )}
-        <Route path="/" element={<Body />} />
-        <Route path="/help" element={<Help />} />
-        <Route path="/ReservationTour" element={<ReservationTour />} />
-        <Route path="/reviews" element={<Reviews />} />
-        <Route path="/tours" element={<Tours />} />
-        <Route path="/tours/category/:categoryId" element={<Tours />} />
-        <Route path="/tours/:id" element={<OneTour />} />
-        <Route path="/contacts" element={<Contacts />} />
-        <Route path="/excursion" element={<Excursions />} />
-        <Route path="/excursion/:id" element={<OneExcursion />} />
-      </Routes>
+        <div className={styles.main}>
+          <Routes>
+            {token ? (
+              <>
+                <Route path="/login" element={<Navigate to="/" />} />
+                <Route path="/signup" element={<Navigate to="/" />} />
+              </>
+            ) : (
+              <>
+                <Route path="/login" element={<SignIn />} />
+                <Route path="/loginAdmin" element={<SignInAdmin />} />
+                <Route path="/signup" element={<SignUp />} />
+                <Route path="/signupadmin" element={<SignUpAdmin />} />
+              </>
+            )}
+            {user.admin ? (
+              <>
+                <Route path="/loginAdmin" element={<Navigate to="/" />} />
+                <Route path="/signupadmin" element={<Navigate to="/" />} />
+              </>
+            ) : (
+              <>
+                <Route path="/login" element={<SignIn />} />
+                <Route path="/loginAdmin" element={<SignInAdmin />} />
+                <Route path="/signup" element={<SignUp />} />
+                <Route path="/signupadmin" element={<SignUpAdmin />} />
+              </>
+            )}
+            <Route path="/" element={<Body />} />
+            <Route path="/help" element={<Help />} />
+            <Route path="/ReservationTour" element={<ReservationTour />} />
+            <Route path="/reviews" element={<Reviews />} />
+            <Route path="/tours" element={<Tours />} />
+            <Route path="/tours/category/:categoryId" element={<Tours />} />
+            <Route path="/tours/:id" element={<OneTour />} />
+            <Route path="/contacts" element={<Contacts />} />
+            <Route path="/excursion" element={<Excursions />} />
+            <Route path="/excursion/:id" element={<OneExcursion />} />
+          </Routes>
+        </div>
+      </div>
 
       <Footer />
     </div>
