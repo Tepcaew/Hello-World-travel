@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getUsers } from "../../features/applicationSlice";
 import styles from "./Tours.module.css";
+import OneBookedTour from "./OneBookedTour";
 
 const BookedTour = () => {
   const users = useSelector((state) => state.application.users);
@@ -24,14 +25,17 @@ const BookedTour = () => {
         return user.tours.map((tour) => {
           return (
             <table className={styles.table}>
-              {tour.confirmed && (
-                <tr className={styles.bookTourRaw}>
-                  <td className={styles.clientConfirm}>{user.login}</td>
-                  <td className={styles.tourConfirm}>{tour.tour.name}</td>
-                  <td className={styles.datesConfirm}>{tour.date}</td>
-                  <td className={styles.statusConfirm}>Подтверждено</td>
-                </tr>
-              )}
+              {tour.confirmed && 
+                <OneBookedTour
+                  id={user._id}
+                  name={user.login}
+                  broneId={tour._id}
+                  tour={tour.tour.name}
+                  date={tour.date}
+                  tourId={tour.tour._id}
+                  confirmed={tour.confirmed}
+                />
+              }
             </table>
           );
         });
