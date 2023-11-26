@@ -23,7 +23,7 @@ const SignUp = () => {
     setPassword(e.target.value);
   };
   const handleSignUp = (e) => {
-    e.preventDefault();
+    e.preventDefault()
     dispatch(authSignUp({ login, password, image }));
   };
   const handleImage = (e) => {
