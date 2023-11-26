@@ -20,7 +20,7 @@ export const addComment = createAsyncThunk(
   "add/comment",
   async ({ text, userId, eventId }, thunkAPI) => {
     const token = thunkAPI.getState().application.token;
-
+    console.log(text, userId, eventId);
     
 
     try {
@@ -71,6 +71,8 @@ export const commentSlice = createSlice({
     builder
     .addCase(fetchComment.fulfilled, (state, action) => {
       state.comments = action.payload;
+      console.log(state.comments);
+      
     })
       .addCase(addComment.fulfilled, (state, action) => {
         state.comments.push(action.payload);
