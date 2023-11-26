@@ -30,15 +30,13 @@ function App() {
   return (
     <div className={styles.aad}>
       {sidebar ? (
-          <div className={styles.sidebar}>
-            <Sidebar />
-          </div>
-        ) : null}
+        <div className={styles.sidebar}>
+          <Sidebar />
+        </div>
+      ) : null}
       <Header />
-      
-      <div className={styles.allMain}>
-        
 
+      <div className={styles.allMain}>
         <div className={styles.main}>
           <Routes>
             {token ? (
@@ -63,7 +61,6 @@ function App() {
                 <Route path="/booking" element={<Navigate to="/login" />} />
                 <Route path="/waitbooking" element={<BookingTour />} />
                 <Route path="/booked" element={<BookedTour />} />
-
               </>
             ) : (
               <>
@@ -87,7 +84,6 @@ function App() {
             <Route path="/excursion/:id" element={<OneExcursion />} />
             <Route path="/orders" element={<Orders />} />
             <Route path="/booking" element={<BroneTour />} />
-
           </Routes>
         </div>
       </div>

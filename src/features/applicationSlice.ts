@@ -13,12 +13,12 @@ const initialState = {
 
 export const authSignUp = createAsyncThunk(
   "auth/signUp",
-  async ({ login, password, image, admin }, thunkAPI) => {
+  async ({ login, password, avatar}, thunkAPI) => {
     const formData = new FormData();
-    formData.append("image", image);
+    formData.append("image", avatar);
     formData.append("login", login);
     formData.append("password", password);
-    formData.append("admin", admin);
+    // formData.append("admin", admin);
 
     try {
       const res = await fetch("http://localhost:3077/sign", {
@@ -29,7 +29,7 @@ export const authSignUp = createAsyncThunk(
       const json = await res.json();
 
       if (json.error) {
-        return thunkAPI.rejectWithValue(json.error);
+        return thunkAPI.rejectWithValue(json.error + "w");
       }
       return json;
     } catch (e) {
