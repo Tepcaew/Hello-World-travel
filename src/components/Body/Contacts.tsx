@@ -12,7 +12,7 @@ const Contacts = () => {
   return (
     <div className={styles.contactsContainer}>
       <div className={styles.textEthno}>
-        <p>ETHNO TRAVEL</p>
+        <p>HELLO WORLD</p>
         <br />
         <h1>Свяжитесь с нами</h1>
       </div>
@@ -66,9 +66,13 @@ const Contacts = () => {
             <a href="#">
               <img src={telegramm} alt="" />
             </a>
+            <a href="#">
+              <img src={facebook} alt="" />
+            </a>
           </div>
         </div>
         <div className={styles.contactsMainBlock}>
+
           <YMaps className={styles.map}>
             <Map
               className={styles.Map}

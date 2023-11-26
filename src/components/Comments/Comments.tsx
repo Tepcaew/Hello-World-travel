@@ -1,32 +1,29 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import { addComment, fetchComment, fetchDeleteComment } from "../../features/CommentsSlice";
+import {
+  addComment,
+  fetchComment,
+  fetchDeleteComment,
+} from "../../features/CommentsSlice";
 import styles from "./Comments.module.css";
 
 const Comments = () => {
-  const dispatch = useDispatch();
-  const { id } = useParams();
-  const eventId = id;
-  const tours = useSelector((state) => state.tours.tours);
-  const excursion = useSelector((state) => state.excursion.excursion);
-
-  const all = tours.concat(excursion);
-
   const comments = useSelector((state) => state.comments.comments);
-  console.log(comments);
-
   const userId = useSelector((state) => state.application.user._id);
-  console.log(userId);
+
+  const [text, setComment] = useState();
+
+  const dispatch = useDispatch();
+  const { eventId } = useParams();
+
 
   const myComment = comments.filter((item) => {
     if (item.eventId === eventId) {
       return item;
     }
   });
-  console.log(myComment);
 
-  const [text, setComment] = useState();
   const handleComment = (e) => {
     setComment(e.target.value);
   };
@@ -36,8 +33,8 @@ const Comments = () => {
     dispatch(addComment({ text, userId, eventId }));
     setComment("");
   };
-  const handleDeleteComment = (id) => {
-    dispatch(fetchDeleteComment(id));
+  const handleDeleteComment = (commentId) => {
+    dispatch(fetchDeleteComment(commentId));
   };
 
   useEffect(() => {
