@@ -102,14 +102,13 @@
     background-color: lightslategrey;
     margin: 0;
   }
-  /* .allMain{
+  .allMain{
     display: flex;
     position: relative;
-  } */
+    min-height: 80vh;
+    min-width: 600px;
+  }
 
-    /* min-height: 80vh;
-
-  } */
   .sidebar{
     position: fixed;
     z-index: 3;
@@ -117,7 +116,8 @@
   .main{
     position: relative;
     z-index: 0 ;
-    margin: 0 auto;
+    margin: 20px auto;
+    width: 100%;
   }
 
 
