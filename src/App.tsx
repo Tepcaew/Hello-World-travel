@@ -20,7 +20,8 @@ import Sidebar from "./components/Sidebar/Sidebar";
 import Orders from "./orders/Orders";
 import BroneTour from "./components/Brone/BroneTour";
 import MyTours from "./components/Tours/MyTours";
-import BookTour from "./components/Tours/BookTour";
+import BookingTour from "./components/Tours/BookingTour";
+import BookedTour from "./components/Tours/BookedTour";
 
 function App() {
   const token = useSelector((state) => state.application.token);
@@ -52,6 +53,7 @@ function App() {
                 <Route path="/signup" element={<SignUp />} />
                 <Route path="/signupadmin" element={<SignUpAdmin />} />
                 <Route path="/booking" element={<Navigate to="/login" />} />
+                <Route path="/mytours" element={<Navigate to="/" />} />
               </>
             )}
             {user.admin ? (
@@ -59,7 +61,9 @@ function App() {
                 <Route path="/loginAdmin" element={<Navigate to="/" />} />
                 <Route path="/signupadmin" element={<Navigate to="/" />} />
                 <Route path="/booking" element={<Navigate to="/login" />} />
-                <Route path="/waitbooking" element={<BookTour />} />
+                <Route path="/waitbooking" element={<BookingTour />} />
+                <Route path="/booked" element={<BookedTour />} />
+
               </>
             ) : (
               <>

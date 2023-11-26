@@ -72,7 +72,7 @@ const Sidebar = () => {
                       </li>
                       <li className="nav-item text-white fs-4 my-1">
                         <a
-                          href="#"
+                          href="/booked"
                           className="nav-link text-white fs-5 d-flex"
                           aria-current="page"
                         >
@@ -96,21 +96,21 @@ const Sidebar = () => {
                       <li className="nav-item text-white fs-4 my-1">
                         <a
                           href="/mytours"
-                          className="nav-link text-white fs-5"
+                          className="nav-link text-white fs-5 d-flex"
                           aria-current="page"
                         >
                           <i className="bi bi-calendar"></i>
-                          <span className="ms-2">Мои туры</span>
+                          <div className="ms-2">Мои туры</div>
                         </a>
                       </li>
                       <li className="nav-item text-white fs-4 my-1">
                         <a
                           href="#"
-                          className="nav-link text-white fs-5"
+                          className="nav-link text-white fs-5 d-flex"
                           aria-current="page"
                         >
                           <i className="bi bi-telephone-outbound"></i>
-                          <span className="ms-2">Подбор тура</span>
+                          <div className="ms-2">Подбор тура</div>
                         </a>
                       </li>
                     </ul>
@@ -137,14 +137,6 @@ const Sidebar = () => {
                     </a>
                   )}
                 </a>
-                <div className="dropdown-menu" aria-labelledby="triggerId">
-                  <a className="dropdown-item" href="#">
-                    Action
-                  </a>
-                  <a className="dropdown-item disabled" href="#">
-                    Disabled action
-                  </a>
-                </div>
               </div>
             </div>
           </div>

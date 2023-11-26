@@ -8,6 +8,7 @@ const initialState = {
   user: {
     tours: [],
   },
+  users: [],
 };
 
 export const authSignUp = createAsyncThunk(
@@ -81,6 +82,24 @@ export const getUserById = createAsyncThunk(
   }
 );
 
+export const getUsers = createAsyncThunk("users/fetch", async (_, thunkAPI) => {
+  try {
+    const res = await fetch("http://localhost:3077/users", {
+      headers: {
+        Authorization: `Bearer ${thunkAPI.getState().application.token}`,
+      },
+    });
+
+    const users = await res.json();
+    if (users.error) {
+      return thunkAPI.rejectWithValue(users.error);
+    }
+    return users;
+  } catch (error) {
+    thunkAPI.rejectWithValue(error);
+  }
+});
+
 export const addTours = createAsyncThunk(
   "user/tour",
   async ({ id, date, tour }, thunkAPI) => {
@@ -151,6 +170,9 @@ export const appliactionSlice = createSlice({
       })
       .addCase(addTours.fulfilled, (state, action) => {
         state.user.tours.concat(action.payload);
+      })
+      .addCase(getUsers.fulfilled, (state, action) => {
+        state.users = action.payload;
       });
   },
 });

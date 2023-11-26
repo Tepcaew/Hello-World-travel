@@ -10,16 +10,19 @@ const MyTours = () => {
   useEffect(() => {
     dispatch(getTours());
   }, [dispatch]);
+  console.log(tourId);
+  console.log(tours);
+
+  
   return (
     <div>
       {tours.map((tour) => {
         return tourId.map((item) => {
-          if (item.tour === tour._id) {
-            console.log(item);
+          if (item.tour._id === tour._id) {
 
             return (
               <div className={styles.myTour}>
-                <div>{tour.name}</div>
+                <div>{item.tour.name}</div>
                 <div>{item.date}</div>
                 {item.confirmed ? (
                   <div>Подтверждено</div>
