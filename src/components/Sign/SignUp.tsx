@@ -25,7 +25,7 @@ const SignUp = () => {
   };
   const handleSignUp = (e) => {
     e.preventDefault()
-    dispatch(authSignUp({ login, password, image, admin }));
+    dispatch(authSignUp({ login, password, avatar, admin }));
   };
   const handleImage = (e) => {
     setImage(e.target.files[0]);
