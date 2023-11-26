@@ -27,7 +27,7 @@ const SignInAdmin = () => {
         {error ? <div>{error}</div> : null}
         <form action="" onSubmit={handlePush}>
           <input type="text" onChange={handleLogin} value={login} />
-          <input type="text" onChange={handlePassword} value={password} />
+          <input type="password" onChange={handlePassword} value={password} />
           <button type="submit">войти</button>
         </form>
       </div>

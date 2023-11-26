@@ -43,7 +43,7 @@ const Sidebar = () => {
                   <ul className="nav nav-pills flex-column">
                     <li className="nav-item text-white fs-4 my-1">
                       <a
-                        href="#"
+                        href="/waitbooking"
                         className="nav-link text-white fs-5"
                         aria-current="page"
                       >
@@ -113,9 +113,9 @@ const Sidebar = () => {
                     Выйти
                   </a>
                 ) : (
-                  <Link to="/login" className={styles.enterLink}>
+                  <a href="/login" className={styles.enterLink}>
                     <a className={styles.enter}>Войти</a>
-                  </Link>
+                  </a>
                 )}
               </a>
               <div className="dropdown-menu" aria-labelledby="triggerId">

@@ -39,7 +39,7 @@ const SignUpAdmin = () => {
         {error ? <div>{error}</div> : null}
         <form action="" onSubmit={handleSignUp}>
           <input type="text" value={login} onChange={handleLogin} />
-          <input type="text" value={password} onChange={handlePassword} />
+          <input type="password" value={password} onChange={handlePassword} />
           <input type="file" onChange={handleImage} />
           <input
             type="checkbox"

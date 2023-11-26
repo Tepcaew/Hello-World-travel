@@ -37,7 +37,7 @@ const SignUp = () => {
           <p className={styles.title}>Регистрация</p>
           <form action="" onSubmit={handleSignUp}>
             <input type="text" value={login} onChange={handleLogin} />
-            <input type="text" value={password} onChange={handlePassword} />
+            <input type="password" value={password} onChange={handlePassword} />
             <input type="file" onChange={handleImage}  className={styles.inputFile}/>
             <button>зарегистрироваться </button>
 

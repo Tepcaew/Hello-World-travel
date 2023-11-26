@@ -20,6 +20,7 @@ import Sidebar from "./components/Sidebar/Sidebar";
 import Orders from "./orders/Orders";
 import BroneTour from "./components/Brone/BroneTour";
 import MyTours from "./components/Tours/MyTours";
+import BookTour from "./components/Tours/BookTour";
 
 function App() {
   const token = useSelector((state) => state.application.token);
@@ -48,14 +49,15 @@ function App() {
                 <Route path="/loginAdmin" element={<SignInAdmin />} />
                 <Route path="/signup" element={<SignUp />} />
                 <Route path="/signupadmin" element={<SignUpAdmin />} />
-                <Route path="/brone" element={<Navigate to="/login" />} />
+                <Route path="/booking" element={<Navigate to="/login" />} />
               </>
             )}
             {user.admin ? (
               <>
                 <Route path="/loginAdmin" element={<Navigate to="/" />} />
                 <Route path="/signupadmin" element={<Navigate to="/" />} />
-                <Route path="/brone" element={<Navigate to="/login" />} />
+                <Route path="/booking" element={<Navigate to="/login" />} />
+                <Route path="/waitbooking" element={<BookTour />} />
               </>
             ) : (
               <>
@@ -63,8 +65,8 @@ function App() {
                 <Route path="/loginAdmin" element={<SignInAdmin />} />
                 <Route path="/signup" element={<SignUp />} />
                 <Route path="/signupadmin" element={<SignUpAdmin />} />
-                <Route path="/brone" element={<BroneTour />} />
-
+                <Route path="/booking" element={<BroneTour />} />
+                <Route path="/mytours" element={<MyTours />} />
               </>
             )}
             <Route path="/" element={<Body />} />
@@ -78,8 +80,7 @@ function App() {
             <Route path="/excursion" element={<Excursions />} />
             <Route path="/excursion/:id" element={<OneExcursion />} />
             <Route path="/orders" element={<Orders />} />
-            <Route path="/brone" element={<BroneTour />} />
-            <Route path="/mytours" element={<MyTours/>} />
+            <Route path="/booking" element={<BroneTour />} />
 
           </Routes>
         </div>
