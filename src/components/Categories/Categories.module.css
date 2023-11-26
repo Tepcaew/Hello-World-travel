@@ -1,8 +1,9 @@
 .categoriesContainer{
     display: flex;
     justify-content: space-evenly;
-    width: 80%;
+    width: 1200px;
     margin: auto;
+    padding: 15px 10px 5px 10px;
 }
 .category{
     color: black;
@@ -11,11 +12,15 @@
 
 .categoryName:hover{
     border-bottom: 1px solid #1f1f1f;
-    padding: 0px 15px 4px 15px;
-    transform: translateY(-13px);
+    /* padding: 2px 10px 2px 10px; */
+    transform: translateY(-5px);
     transition: 1s;
     margin: -5;
 }
 .categoryName::before{
     transition: ease-in-out 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+.categoryName{
+    font-size: 20px;
+
 }
