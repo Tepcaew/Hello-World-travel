@@ -20,6 +20,8 @@ import Sidebar from "./components/Sidebar/Sidebar";
 import Orders from "./orders/Orders";
 import BroneTour from "./components/Brone/BroneTour";
 import MyTours from "./components/Tours/MyTours";
+import BookingTour from "./components/Tours/BookingTour";
+import BookedTour from "./components/Tours/BookedTour";
 
 function App() {
   const token = useSelector((state) => state.application.token);
@@ -27,13 +29,15 @@ function App() {
   const sidebar = useSelector((state) => state.justReducer.sidebar);
   return (
     <div className={styles.aad}>
-      <Header />
-      <div className={styles.allMain}>
-        {sidebar ? (
+      {sidebar ? (
           <div className={styles.sidebar}>
             <Sidebar />
           </div>
         ) : null}
+      <Header />
+      
+      <div className={styles.allMain}>
+        
 
         <div className={styles.main}>
           <Routes>
@@ -48,14 +52,18 @@ function App() {
                 <Route path="/loginAdmin" element={<SignInAdmin />} />
                 <Route path="/signup" element={<SignUp />} />
                 <Route path="/signupadmin" element={<SignUpAdmin />} />
-                <Route path="/brone" element={<Navigate to="/login" />} />
+                <Route path="/booking" element={<Navigate to="/login" />} />
+                <Route path="/mytours" element={<Navigate to="/" />} />
               </>
             )}
             {user.admin ? (
               <>
                 <Route path="/loginAdmin" element={<Navigate to="/" />} />
                 <Route path="/signupadmin" element={<Navigate to="/" />} />
-                <Route path="/brone" element={<Navigate to="/login" />} />
+                <Route path="/booking" element={<Navigate to="/login" />} />
+                <Route path="/waitbooking" element={<BookingTour />} />
+                <Route path="/booked" element={<BookedTour />} />
+
               </>
             ) : (
               <>
@@ -63,8 +71,8 @@ function App() {
                 <Route path="/loginAdmin" element={<SignInAdmin />} />
                 <Route path="/signup" element={<SignUp />} />
                 <Route path="/signupadmin" element={<SignUpAdmin />} />
-                <Route path="/brone" element={<BroneTour />} />
-
+                <Route path="/booking" element={<BroneTour />} />
+                <Route path="/mytours" element={<MyTours />} />
               </>
             )}
             <Route path="/" element={<Body />} />
@@ -78,8 +86,7 @@ function App() {
             <Route path="/excursion" element={<Excursions />} />
             <Route path="/excursion/:id" element={<OneExcursion />} />
             <Route path="/orders" element={<Orders />} />
-            <Route path="/brone" element={<BroneTour />} />
-            <Route path="/mytours" element={<MyTours/>} />
+            <Route path="/booking" element={<BroneTour />} />
 
           </Routes>
         </div>

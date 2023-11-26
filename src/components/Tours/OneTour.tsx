@@ -56,7 +56,7 @@ const OneTour = () => {
         </div>
 
         <button className={styles.broneButton} onClick={handleTourId}>
-          <Link to="/brone" className={styles.broneLink}>
+          <Link to="/booking" className={styles.broneLink}>
             Забронировать тур
           </Link>
         </button>

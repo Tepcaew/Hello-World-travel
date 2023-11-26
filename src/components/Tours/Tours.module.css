@@ -59,7 +59,6 @@
   background: rgba(0, 0, 0, 0.9);
   color: #f1f1f1;
   margin: auto;
-
 }
 .oneTourDay {
   display: flex;
@@ -70,16 +69,15 @@
 .oneTourDayImage {
   width: 50%;
 }
-.oneTourHead{
+.oneTourHead {
   display: flex;
   justify-content: center;
   align-items: end;
 }
-.oneTourImage{
+.oneTourImage {
   width: 100%;
   z-index: 0;
   height: 600px;
-
 }
 .oneTourText {
   width: 100%;
@@ -107,7 +105,9 @@
   justify-content: center;
   font-size: 40px;
 }
-.oneTourDescr, .oneTourTransport, .oneTourLength {
+.oneTourDescr,
+.oneTourTransport,
+.oneTourLength {
   height: 40%;
   padding: 0 5% 0 5%;
   font-size: 26px;
@@ -125,16 +125,16 @@
   display: inline-block; /* Строчно-блочный элемент */
   overflow: hidden; /* Скрываем всё за контуром */
   height: 350px;
- }
- .tourImage{
+}
+.tourImage {
   transition: 1s; /* Время эффекта */
   display: block; /* Убираем небольшой отступ снизу */
- }
- .tourImage:hover {
+}
+.tourImage:hover {
   transform: scale(1.2); /* Увеличиваем масштаб */
   z-index: 101;
- }
- .tourCards {
+}
+.tourCards {
   width: 23%;
   margin: 10px auto;
   height: 200px;
@@ -149,18 +149,72 @@
 .tourCards:hover {
   box-shadow: rgba(32, 35, 34, 0.812) -1px -1px 30px;
 }
-.broneLink{
+.broneLink {
   text-decoration: none;
   color: white;
 }
-.broneButton{
+.broneButton {
   margin: 10px auto;
   border-radius: 20px;
   background-color: rgb(1, 186, 214);
   display: flex;
   align-items: center;
 }
-.myTour{
+.myTour {
   display: flex;
   justify-content: space-between;
+}
+.bookToursContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+table {
+  border: 1px solid black;
+}
+.headRaw,
+.bookTourRaw {
+  display: flex;
+  margin: auto;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+}
+.client {
+  width: 12%;
+}
+.tour {
+  width: 22%;
+}
+.dates {
+  width: 30%;
+}
+.status,
+.confirm {
+  width: 18%;
+}
+.clientConfirm {
+  width: 18%;
+}
+.tourConfirm {
+  width: 25%;
+}
+.datesConfirm {
+  width: 35%;
+}
+.statusConfirm {
+  width: 22%;
+}
+.myTour {
+  text-align: center;
+display: flex;
+flex-direction: column;
+  width: 25%;
+}
+.myDates {
+  width: 50%;
+}
+.myStatus {
+  width: 25%;
 }

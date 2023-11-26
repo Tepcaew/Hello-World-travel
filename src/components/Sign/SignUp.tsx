@@ -6,6 +6,7 @@ import styles from "./Sign.module.css";
 
 const SignUp = () => {
   const error = useSelector((state) => state.application.error);
+  const admin = useSelector((state) => state.justReducer.admin)
   const [login, setLogin] = useState("");
   const [password, setPassword] = useState("");
   const [image, setImage] = useState("");
@@ -24,7 +25,7 @@ const SignUp = () => {
   };
   const handleSignUp = (e) => {
     e.preventDefault()
-    dispatch(authSignUp({ login, password, image }));
+    dispatch(authSignUp({ login, password, image, admin }));
   };
   const handleImage = (e) => {
     setImage(e.target.files[0]);
@@ -37,7 +38,7 @@ const SignUp = () => {
           <p className={styles.title}>Регистрация</p>
           <form action="" onSubmit={handleSignUp}>
             <input type="text" value={login} onChange={handleLogin} />
-            <input type="text" value={password} onChange={handlePassword} />
+            <input type="password" value={password} onChange={handlePassword} />
             <input type="file" onChange={handleImage}  className={styles.inputFile}/>
             <button>зарегистрироваться </button>
 
