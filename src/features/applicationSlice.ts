@@ -126,6 +126,31 @@ export const addTours = createAsyncThunk(
   }
 );
 
+export const confirmTour = createAsyncThunk(
+  "todos/complete",
+  async ({ id, broneId, date, tourId }, thunkAPI) => {
+    try {
+      const res = await fetch(`http://localhost:3077/users/${id}`, {
+        method: "PATCH",
+        headers: {
+          Authorization: `Bearer ${thunkAPI.getState().application.token}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ broneId, date, tourId }),
+      });
+
+      const tours = await res.json();
+
+      if (tours.error) {
+        return thunkAPI.rejectWithValue(tours.error);
+      }
+      return { id, broneId };
+    } catch (error) {
+      thunkAPI.rejectWithValue(error);
+    }
+  }
+);
+
 export const exits = createAsyncThunk("exit/user", async (_, thunkAPI) => {
   return localStorage.clear();
 });
@@ -173,6 +198,22 @@ export const appliactionSlice = createSlice({
       })
       .addCase(getUsers.fulfilled, (state, action) => {
         state.users = action.payload;
+      })
+      .addCase(confirmTour.fulfilled, (state, action) => {
+        // state.loading = false;
+        // state.error = null;
+        window.location.reload()
+        state.users = state.users.map((user) => {
+          if (user._id === action.payload?.id) {
+            return user.tours.map((tour) => {
+              if (tour._id === action.payload?.broneId) {
+                tour.confirmed = !tour.confirmed;
+              }
+              return tour;
+            });
+          }
+          return user;
+        });
       });
   },
 });
