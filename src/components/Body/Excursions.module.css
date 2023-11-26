@@ -74,13 +74,14 @@
     background-color: lightslategrey;
     margin: 0;
   }
-  .allMain{
+  /* .allMain{
     display: flex;
     position: relative;
+  } */
 
-    min-height: 80vh;
+    /* min-height: 80vh;
 
-  }
+  } */
   .sidebar{
     position: fixed;
     z-index: 3;

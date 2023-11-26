@@ -9,7 +9,7 @@ const SignUp = () => {
   const admin = useSelector((state) => state.justReducer.admin)
   const [login, setLogin] = useState("");
   const [password, setPassword] = useState("");
-  const [image, setImage] = useState("");
+  const [avatar, setImage] = useState("");
 
   const dispatch = useDispatch();
 
@@ -40,7 +40,7 @@ const SignUp = () => {
             <input type="text" value={login} onChange={handleLogin} />
             <input type="password" value={password} onChange={handlePassword} />
             <input type="file" onChange={handleImage}  className={styles.inputFile}/>
-            <button>зарегистрироваться </button>
+            <button className={styles.btn}>зарегистрироваться </button>
 
           </form>
         </div>

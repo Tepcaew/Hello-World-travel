@@ -13,6 +13,8 @@ const OneExcursion = () => {
   const excursion = useSelector((state) => state.excursion.excursion);
 
   const { id } = useParams();
+
+  
   const oneExcursion = excursion?.find((excursion) => excursion._id === id);
 
   useEffect(() => {
