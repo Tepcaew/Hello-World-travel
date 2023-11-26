@@ -37,6 +37,7 @@ const BookingTour = () => {
                   tour={tour.tour.name}
                   date={tour.date}
                   tourId={tour.tour._id}
+                  confirmed={tour.confirmed}
                 />
               }
             </table>
