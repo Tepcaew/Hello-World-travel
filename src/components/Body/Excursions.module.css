@@ -73,10 +73,10 @@
     background-color: lightslategrey;
     margin: 0;
   }
-  .allMain{
+  /* .allMain{
     display: flex;
     position: relative;
-  }
+  } */
   .sidebar{
     position: fixed;
     z-index: 3;

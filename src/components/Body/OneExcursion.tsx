@@ -6,12 +6,15 @@ import styles from "./Excursions.module.css";
 import { Navigation, Pagination, Scrollbar, A11y, Keyboard } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
+import Comments from "../comments/Comments";
 
 const OneExcursion = () => {
   const dispatch = useDispatch();
   const excursion = useSelector((state) => state.excursion.excursion);
 
   const { id } = useParams();
+
+  
   const oneExcursion = excursion?.find((excursion) => excursion._id === id);
 
   useEffect(() => {
@@ -76,6 +79,7 @@ const OneExcursion = () => {
           </div>
         </div>
       </div>
+      <Comments/>
     </div>
   );
 };

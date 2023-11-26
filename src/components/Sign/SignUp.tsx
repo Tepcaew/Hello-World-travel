@@ -8,7 +8,7 @@ const SignUp = () => {
   const error = useSelector((state) => state.application.error);
   const [login, setLogin] = useState("");
   const [password, setPassword] = useState("");
-  const [image, setImage] = useState("");
+  const [avatar, setImage] = useState("");
 
   const dispatch = useDispatch();
 
@@ -24,7 +24,7 @@ const SignUp = () => {
   };
   const handleSignUp = (e) => {
     e.preventDefault();
-    dispatch(authSignUp({ login, password, image }));
+    dispatch(authSignUp({ login, password, avatar}));
   };
   const handleImage = (e) => {
     setImage(e.target.files[0]);
@@ -39,7 +39,7 @@ const SignUp = () => {
             <input type="text" value={login} onChange={handleLogin} />
             <input type="text" value={password} onChange={handlePassword} />
             <input type="file" onChange={handleImage}  className={styles.inputFile}/>
-            <button>зарегистрироваться </button>
+            <button className={styles.btn}>зарегистрироваться </button>
 
           </form>
         </div>

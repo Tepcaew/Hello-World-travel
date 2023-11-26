@@ -18,12 +18,13 @@ import SignUpAdmin from "./components/Sign/Admin/SignUpAdmin";
 import SignInAdmin from "./components/Sign/Admin/SignInAdmin";
 import Sidebar from "./components/Sidebar/Sidebar";
 import Orders from "./orders/Orders";
+import Comments from "./components/comments/Comments";
 
 function App() {
   const token = useSelector((state) => state.application.token);
   const user = useSelector((state) => state.application.user);
   const sidebar = useSelector((state) => state.sidebarReducer.sidebar);
-  console.log(sidebar);
+
 
   return (
     <div className={styles.aad}>
@@ -41,6 +42,7 @@ function App() {
               <>
                 <Route path="/login" element={<Navigate to="/" />} />
                 <Route path="/signup" element={<Navigate to="/" />} />
+                <Route path="/com" element={<Comments />} />
               </>
             ) : (
               <>
