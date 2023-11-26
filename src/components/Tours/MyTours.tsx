@@ -10,8 +10,6 @@ const MyTours = () => {
   useEffect(() => {
     dispatch(getTours());
   }, [dispatch]);
-  console.log(tourId);
-  console.log(tours);
 
   return (
     <div className={styles.bookToursContainer}>

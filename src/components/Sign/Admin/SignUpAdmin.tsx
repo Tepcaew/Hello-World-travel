@@ -11,7 +11,6 @@ const SignUpAdmin = () => {
   const [login, setLogin] = useState("");
   const [password, setPassword] = useState("");
   const [image, setImage] = useState("");
-  console.log(admin);
   
 
   const dispatch = useDispatch();

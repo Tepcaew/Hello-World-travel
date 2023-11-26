@@ -10,7 +10,7 @@ import slide3 from "../../assets/аргунскоеУшелье.jpg";
 
 const Slider = () => {
     const flickityOptions = {
-        initialIndex: 2,
+        initialIndex: 1,
         wrapAround: true,
       };
     
@@ -19,6 +19,7 @@ const Slider = () => {
         title: [
           "Путешествие в гостеприимный Грозный и горные селения Чечни с Hello, World!",
           "Приглашаю вас в вечернее путешествие по самым красивым мечетям Чечни",
+          "Вместе с Hello World отправимся в увлекательное путешествие по величественному Аргунскому ущелью"
         ],
         image: [slide1, slide2, slide3],
       };

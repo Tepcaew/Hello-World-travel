@@ -27,7 +27,6 @@ const BroneTour = () => {
   const handleAddTour = () => {
     dispatch(addTours({ id, date, tour }));
   };
-console.log(id, date, tour);
 
   return (
     <div className={styles.brone}>

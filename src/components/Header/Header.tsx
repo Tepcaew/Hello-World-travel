@@ -18,7 +18,7 @@ const Header = () => {
 
   const all = tours.concat(excursion);
 
-  const [off, setOff] = useState(true);
+  const [off, setOff] = useState(false);
   const [value, setValue] = useState("");
 
   const filtered = all.filter((item) => {
@@ -69,16 +69,17 @@ const Header = () => {
         <div className={styles.cntr}>
           <div className={styles.cntr}>
             <div className={styles.cntrinnr}>
-              <label className={`${styles.search} inpt_search`}>
+              <label  className={`${styles.search} ${styles.inpt_search}`}>
                 <input
+                  
                   onChange={(e) => setValue(e.target.value)}
+                  onClick={()=>(setOff(true))}
                   id="inpt_search"
                   type="text"
                 />
-                {off && (
-                  <ul className={styles.autocomplete}>
-                    {value
-                      ? filtered.map((item) => {
+                {off?<ul className={styles.autocomplete}>
+
+                    {value&&filtered.map((item) => {
                           return (
                             <Link
                               to={
@@ -92,10 +93,9 @@ const Header = () => {
                               </li>
                             </Link>
                           );
-                        })
-                      : null}
-                  </ul>
-                )}
+                        })}
+
+                  </ul>:null} 
               </label>
             </div>
           </div>
