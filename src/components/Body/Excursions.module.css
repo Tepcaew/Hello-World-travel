@@ -1,3 +1,6 @@
+*{
+  box-sizing: border-box;
+}
 .excursionContainer {
     width: 80%;
     height: 100%;
@@ -21,22 +24,25 @@
       box-shadow: rgba(32, 35, 34, 0.812) -1px -1px 30px;
   }
   .excursionText {
+    width: 900px;
     display: contents;
     color: white;
   }
   .excursionName {
-    text-align: center;
+    width: 900px;
+
     margin: 0;
     height: 40%;
-    padding: 0 5% 0 5%;
+    padding:50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     color: white;
   }
   .excursionDescr {
+    width: 900px;
     height: 40%;
-    padding: 0 5% 0 5%;
+    padding: 50px;
     font-size: 18px;
     color: white;
   }
@@ -47,7 +53,7 @@
     align-items: center;
     font-size: 18px;
     height: 20%;
-    padding: 0 5% 0 5%;
+    padding: 50px;
   }
   .excursionImage {
     width: 100%;
