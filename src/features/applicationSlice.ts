@@ -114,7 +114,6 @@ export const addTours = createAsyncThunk(
       });
 
       const user = await res.json();
-      console.log(user);
 
       if (user.error) {
         return thunkAPI.rejectWithValue(user.error);

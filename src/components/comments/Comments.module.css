@@ -59,8 +59,8 @@ form{
     border-radius: 30px;
 }
 .comment{
-width: 800px;
-    height: 60px;
+    width: 800px;
+    height: 90px;
     margin-bottom: 10px;
 }
 .btnDelete{
@@ -81,6 +81,11 @@ width: 800px;
     gap: 10px;
     margin-left: 15px;
 }
+.user div{
+    color: black;
+    font-size: 22px;
+    font-weight: 700;
+}
 .divInfo{
     width: 100%;
     text-align: center;
@@ -91,7 +96,11 @@ width: 800px;
     display: contents;
 }
 .avatar{
-    width: 20px;
+    width: 40px;
     border-radius: 30px;
-    height: 20px;
+    height: 40px;
+}
+.container{
+    display: flex;
+    justify-content: center;
 }

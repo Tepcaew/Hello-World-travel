@@ -7,6 +7,7 @@ import {
   fetchDeleteComment,
 } from "../../features/CommentsSlice";
 import styles from "./Comments.module.css";
+import { getUsers } from "../../features/applicationSlice";
 
 const Comments = () => {
   const comments = useSelector((state) => state.comments.comments);
@@ -15,8 +16,8 @@ const Comments = () => {
   const [text, setComment] = useState();
 
   const dispatch = useDispatch();
-  const { eventId } = useParams();
-
+  const { id } = useParams();
+  const eventId = id;
 
   const myComment = comments.filter((item) => {
     if (item.eventId === eventId) {
@@ -38,11 +39,11 @@ const Comments = () => {
   };
 
   useEffect(() => {
-    dispatch(fetchComment());
+    dispatch(fetchComment(), getUsers());
   }, [dispatch]);
 
   return (
-    <div>
+    <div className={styles.container}>
       <div className={styles.divComment}>
         <form className={styles.form} action="" onSubmit={handleAddComment}>
           <input
@@ -57,15 +58,14 @@ const Comments = () => {
           {myComment
             .map((item) => {
               return (
-                <div className={styles.comment}>
+                <div key={item._id} className={styles.comment}>
                   <span className={styles.user}>
-                    {" "}
-                    {/* <img
+                    <img
                       className={styles.avatar}
-                      src={`http://localhost:3077/${item.userId.avatar}`}
+                      src={`http://localhost:3077/${item?.userId.avatar}`}
                       alt=""
-                    /> */}
-                    {/* {item.userId.login} */}
+                    />
+                    <div>{item?.userId.login}</div>
                   </span>
                   <div className={styles.divText}>
                     <p className={styles.commentText}>{item.text}</p>

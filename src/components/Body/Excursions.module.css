@@ -7,11 +7,11 @@
     margin: auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
     padding: 0px 0px 120px 0;
   }
   .excursionCard {
-    width: 45%;
+    width: 35%;
     gap: 20px;
     margin: 1%;
     display: grid;
@@ -32,23 +32,23 @@
   .excursionName {
 
     margin: 0;
-    padding: 10px 10px 10px 10px;
     color: white;
     height: auto;
   }
   .excursionDescr {
-    font-size: 18px;
+    font-size: 16px;
     color: white;
-    padding: 0 10px;
+    padding: 0 5px;
+    
   }
   .excursionPriceAndRating {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     font-size: 18px;
     height: 10%;
-    padding: 10px 10px 10px 10px;
+    padding: 5px 10px 0px 10px;
   }
   .excursionImage {
     width: 100%;
@@ -59,7 +59,7 @@
   .excursionImage {
     display: inline-block; /* Строчно-блочный элемент */
     overflow: hidden; /* Скрываем всё за контуром */
-    height: 500px;
+    height: auto;
 
    }
    .excursionImage{
@@ -88,10 +88,18 @@
   }
   .main{
     position: relative;
-    z-index: 0 ;
-    margin: 0 auto;
+    text-align: center;
   }
-
+.qq{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 20px 0
+}
+.oneExcursionImage{
+ border-radius: 10px;
+}
 
    
 
