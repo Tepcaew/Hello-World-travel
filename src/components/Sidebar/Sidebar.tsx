@@ -9,7 +9,6 @@ import { exits } from "../../features/applicationSlice";
 const Sidebar = () => {
   const user = useSelector((state) => state.application.user);
   const token = useSelector((state) => state.application.token);
-  console.log(user);
   const dispatch = useDispatch();
   const handleExit = () => {
     dispatch(exits());
@@ -77,7 +76,7 @@ const Sidebar = () => {
                   <ul className="nav nav-pills flex-column">
                     <li className="nav-item text-white fs-4 my-1">
                       <a
-                        href="#"
+                        href="/mytours"
                         className="nav-link text-white fs-5"
                         aria-current="page"
                       >
