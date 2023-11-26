@@ -28,13 +28,15 @@ function App() {
   const sidebar = useSelector((state) => state.justReducer.sidebar);
   return (
     <div className={styles.aad}>
-      <Header />
-      <div className={styles.allMain}>
-        {sidebar ? (
+      {sidebar ? (
           <div className={styles.sidebar}>
             <Sidebar />
           </div>
         ) : null}
+      <Header />
+      
+      <div className={styles.allMain}>
+        
 
         <div className={styles.main}>
           <Routes>
