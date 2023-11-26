@@ -6,6 +6,7 @@ import categories from "../features/categoriesSlice";
 import guide from "../features/guideSlice";
 import order from "../features/ordersSlice";
 import { justReducer } from "../features/justReducer";
+import comments from "../features/CommentsSlice";
 
 export const store = configureStore({
   reducer: {
@@ -15,7 +16,9 @@ export const store = configureStore({
     guide,
     categories,
     order,
-    justReducer
+    justReducer,
+    comments
+    
   },
 });
 
