@@ -4,9 +4,9 @@ import excursion from "../features/excursionSlice";
 import tours from "../features/toursSlice";
 import categories from "../features/categoriesSlice";
 import guide from "../features/guideSlice";
-import { sidebarReducer } from "../features/sidebarReducer";
 import order from "../features/ordersSlice";
-import comments from "../features/commentsSlice";
+import { justReducer } from "../features/justReducer";
+import comments from "../features/CommentsSlice";
 
 export const store = configureStore({
   reducer: {
@@ -15,9 +15,10 @@ export const store = configureStore({
     tours,
     guide,
     categories,
-    sidebarReducer,
     order,
+    justReducer,
     comments
+    
   },
 });
 

@@ -6,6 +6,7 @@ import TourCard from "../Tours/TourCard";
 import { getTours } from "../../features/toursSlice";
 import samolet from "../../assets/samolet.png"
 import ReservationTour from "./Reservation/ReservationTour";
+import Slider from "../slider/Slider";
 
 const Body = () => {
   const tours = useSelector((state) => state.tours.tours);
@@ -25,7 +26,7 @@ const Body = () => {
           Трёхдневные авторские туры из Грозного для групп и подбор
           индивидуальных маршрутов - испытайте новые впечатления от пешего
           похода, сплава на байдарках или поездки по холмам на джипах.
-      </div>
+      </div>      <Slider/>
         <h2 className={styles.text3}>Список туров на 2023 год</h2>
       <div className={styles.cardsContainer} >
       {tours.map((tour) => {
@@ -46,6 +47,7 @@ const Body = () => {
           </div>
         </div>
       </div>
+
       <Guides />
       <ReservationTour/>
     </div>

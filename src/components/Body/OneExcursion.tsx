@@ -6,7 +6,7 @@ import styles from "./Excursions.module.css";
 import { Navigation, Pagination, Scrollbar, A11y, Keyboard } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import Comments from "../comments/Comments";
+import Comments from "../Comments/Comments";
 
 const OneExcursion = () => {
   const dispatch = useDispatch();

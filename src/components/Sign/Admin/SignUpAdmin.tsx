@@ -3,13 +3,16 @@ import { useDispatch, useSelector } from "react-redux";
 import { authSignUp } from "../../../features/applicationSlice";
 import { Link } from "react-router-dom";
 import styles from "../Sign.module.css";
+import { adminOn } from "../../../features/justReducer";
 
 const SignUpAdmin = () => {
   const error = useSelector((state) => state.application.error);
+  const admin = useSelector((state) => state.justReducer.admin)
   const [login, setLogin] = useState("");
   const [password, setPassword] = useState("");
   const [image, setImage] = useState("");
-  const [admin, setAdmin] = useState(false);
+  console.log(admin);
+  
 
   const dispatch = useDispatch();
 
@@ -27,11 +30,7 @@ const SignUpAdmin = () => {
     setImage(e.target.files[0]);
   };
   const handleAdmin = (e) => {
-    e.preventDefault();
-    if (admin === false) {
-      return setAdmin(true);
-    }
-    return setAdmin(false);
+    dispatch(adminOn())
   };
   return (
     <>
@@ -39,7 +38,7 @@ const SignUpAdmin = () => {
         {error ? <div>{error}</div> : null}
         <form action="" onSubmit={handleSignUp}>
           <input type="text" value={login} onChange={handleLogin} />
-          <input type="text" value={password} onChange={handlePassword} />
+          <input type="password" value={password} onChange={handlePassword} />
           <input type="file" onChange={handleImage} />
           <input
             type="checkbox"
