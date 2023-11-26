@@ -9,7 +9,6 @@
   z-index: 1;
 }
 
-
 .navigation {
   display: flex;
   justify-content: space-around;
@@ -108,25 +107,13 @@
   outline-width: 0px;
 }
 
+
 .autocomplete {
   position: absolute;
   z-index: 300;
-  left: 0;
-  top: 50px;
-  width: 0px;
-  background-color: red;
-  list-style: none;
-  z-index: 1002;
-  max-height: 240px;
-  height: 0;
-}
-.autocomplete {
-  position: absolute;
-  z-index: 300;
-  left: 0;
-  top: 15px;
-  width: 150px;
-  background-color: red;
+  left: -50px;
+
+  width: 300px;
   list-style: none;
   z-index: 1002;
   max-height: 240px;
@@ -134,10 +121,16 @@
 }
 
 .item {
-  background-color: red;
+  height: 40px;
+  background-color: #1f1f1f;
+  padding: 6px 10px 10px 12px;
+  color: darkturquoise ;
   z-index: 105;
 }
-
+.autocomplete a{
+  text-decoration: none;
+  list-style: none ;
+}
 .logoBlock{
     width: 17%;
 }
