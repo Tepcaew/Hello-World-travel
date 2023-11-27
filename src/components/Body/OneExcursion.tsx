@@ -12,8 +12,8 @@ import {
 } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import Comments from "../comments/Commentss";
 
+import Comments from "../commentsss/Commentss";
 const OneExcursion = () => {
   const dispatch = useDispatch();
   const excursion = useSelector((state) => state.excursion.excursion);
