@@ -59,13 +59,12 @@ const Comments = () => {
               return (
                 <div className={styles.comment}>
                   <span className={styles.user}>
-                    {" "}
-                    {/* <img
+                    <img
                       className={styles.avatar}
                       src={`http://localhost:3077/${item.userId.avatar}`}
                       alt=""
-                    /> */}
-                    {/* {item.userId.login} */}
+                    /> 
+                    {item.userId.login}
                   </span>
                   <div className={styles.divText}>
                     <p className={styles.commentText}>{item.text}</p>
