@@ -61,10 +61,10 @@ const Comments = () => {
                   <span className={styles.user}>
                     <img
                       className={styles.avatar}
-                      src={`http://localhost:3077/${item.userId.avatar}`}
+                      src={`http://localhost:3077/${item?.userId.avatar}`}
                       alt=""
                     /> 
-                    {item.userId.login}
+                    <div>{item?.userId.login}</div>
                   </span>
                   <div className={styles.divText}>
                     <p className={styles.commentText}>{item.text}</p>
@@ -83,6 +83,7 @@ const Comments = () => {
             .reverse()}
         </div>
       </div>
+    </div>
     </div>
   );
 };
