@@ -30,12 +30,21 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-image:url('https://дивногорск-ое.рф/wp-content/uploads/2022/07/s1200_0.jpg');
+  background-image:url('https://klike.net/uploads/posts/2019-11/1574605225_22.jpg');
+  background-repeat: no-repeat;
   border-radius: 20px;
   margin-bottom: 30px;
 }
 
 .applicationContent div {
+  text-align: center;
+}
+.applicationContent p {
+  color: rgb(253, 110, 8);
+  margin: 10px;
+  background-color: rgba(0, 0, 0, 0.555);
+  padding: 3px;
+  border-radius: 10px;
   text-align: center;
 }
 
@@ -58,4 +67,8 @@ input {
 }
 .pt {
   color: rgb(253, 110, 8);
+  margin: 10px;
+  background-color: rgba(0, 0, 0, 0.636);
+  padding: 10px;
+  border-radius: 10px;
 }

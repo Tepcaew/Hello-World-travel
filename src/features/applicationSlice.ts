@@ -13,12 +13,12 @@ const initialState = {
 
 export const authSignUp = createAsyncThunk(
   "auth/signUp",
-  async ({ login, password, avatar}, thunkAPI) => {
+  async ({ login, password, avatar, admin}, thunkAPI) => {
     const formData = new FormData();
     formData.append("image", avatar);
     formData.append("login", login);
     formData.append("password", password);
-    // formData.append("admin", admin);
+    formData.append("admin", admin);
 
     try {
       const res = await fetch("http://localhost:3077/sign", {
@@ -143,7 +143,7 @@ export const confirmTour = createAsyncThunk(
       if (tours.error) {
         return thunkAPI.rejectWithValue(tours.error);
       }
-      return { id, broneId };
+      return tours;
     } catch (error) {
       thunkAPI.rejectWithValue(error);
     }
@@ -201,15 +201,9 @@ export const appliactionSlice = createSlice({
       .addCase(confirmTour.fulfilled, (state, action) => {
         // state.loading = false;
         // state.error = null;
-        window.location.reload()
         state.users = state.users.map((user) => {
-          if (user._id === action.payload?.id) {
-            return user.tours.map((tour) => {
-              if (tour._id === action.payload?.broneId) {
-                tour.confirmed = !tour.confirmed;
-              }
-              return tour;
-            });
+          if (user._id === action.payload._id) {
+             user = action.payload
           }
           return user;
         });

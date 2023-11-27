@@ -82,7 +82,7 @@ const Sidebar = () => {
                       </li>
                       <li className="nav-item text-white fs-4 my-1">
                         <a
-                          href="#"
+                          href="/selection"
                           className="nav-link text-white fs-5 d-flex"
                           aria-current="page"
                         >
@@ -105,7 +105,7 @@ const Sidebar = () => {
                       </li>
                       <li className="nav-item text-white fs-4 my-1">
                         <a
-                          href="#"
+                          href="/selected"
                           className="nav-link text-white fs-5 d-flex"
                           aria-current="page"
                         >

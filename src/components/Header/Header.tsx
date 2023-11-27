@@ -21,6 +21,10 @@ const Header = () => {
   const [off, setOff] = useState(false);
   const [value, setValue] = useState("");
 
+  const handleCleanInput = () => {
+    setValue("")
+  }
+
   const filtered = all.filter((item) => {
     return item.name.toLowerCase().includes(value.toLowerCase());
   });
@@ -82,6 +86,7 @@ const Header = () => {
                     {value&&filtered.map((item) => {
                           return (
                             <Link
+                            onClick={handleCleanInput}
                               to={
                                 item.length
                                   ? `/tours/${item._id}`
