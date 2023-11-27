@@ -61,6 +61,7 @@ function App() {
                 <Route path="/booking" element={<Navigate to="/login" />} />
                 <Route path="/waitbooking" element={<BookingTour />} />
                 <Route path="/booked" element={<BookedTour />} />
+                <Route path="/selection" element={<Orders/>}/>
               </>
             ) : (
               <>
@@ -70,6 +71,8 @@ function App() {
                 <Route path="/signupadmin" element={<SignUpAdmin />} />
                 <Route path="/booking" element={<BroneTour />} />
                 <Route path="/mytours" element={<MyTours />} />
+                <Route path="/selected" element={<ReservationTour />} />
+
               </>
             )}
             <Route path="/" element={<Body />} />

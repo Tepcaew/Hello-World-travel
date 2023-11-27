@@ -21,9 +21,9 @@ const Contacts = () => {
           <h2>Офис в Грозном</h2>
           <br />
           <p>8989 912 89 89</p>
-          <p>ethnotravel@marwa.ru</p>
+          <p>hello.grozny@world.ru</p>
           <p>Офис работает с 10:00 до 18:00, Выходной - Воскресенье</p>
-          <p>Республика Дагестан, г. Махачкала , Батырая 155</p>
+          <p>Чеченская Республика, г. Грозный , Трошева 7</p>
           <div className={styles.Icon}>
             <a href="#">
               <img src={whatsApp} alt="" />
@@ -41,7 +41,7 @@ const Contacts = () => {
             <Map
               className={styles.Map}
               defaultState={{
-                center: [42.972968, 47.517231],
+                center: [43.324675, 45.692376],
                 zoom: 17,
               }}
             />
@@ -53,7 +53,7 @@ const Contacts = () => {
           <h2>Офис в Дербенте</h2>
           <br />
           <p>+7 928 593 81 81</p>
-          <p>ethnotravel@marwa.ru</p>
+          <p>hello.derbent@world.ru</p>
           <p>
             Офис работает с 10:00 до 17:00, Обед 12:00 - 13:00. Выходной -
             Воскресенье
@@ -77,7 +77,7 @@ const Contacts = () => {
             <Map
               className={styles.Map}
               defaultState={{
-                center: [48.699855, 44.494041],
+                center: [42.064022, 48.289145],
                 zoom: 17,
               }}
             />
