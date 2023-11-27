@@ -12,7 +12,7 @@ import {
 } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import Comments from "../Comments/Comments";
+import Comments from "../comments/Commentss";
 
 const OneExcursion = () => {
   const dispatch = useDispatch();
