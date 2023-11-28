@@ -42,7 +42,7 @@ const Comments = () => {
   }, [dispatch]);
 
   return (
-    <div>
+    <div className={styles.divs}>
       <div className={styles.divComment}>
         <form className={styles.form} action="" onSubmit={handleAddComment}>
           <input
