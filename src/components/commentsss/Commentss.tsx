@@ -42,7 +42,7 @@ const Comments = () => {
   }, [dispatch]);
 
   return (
-    <div>
+    <div className={styles.divs}>
       <div className={styles.divComment}>
         <form className={styles.form} action="" onSubmit={handleAddComment}>
           <input
@@ -64,7 +64,8 @@ const Comments = () => {
                       src={`http://localhost:3077/${item.userId.avatar}`}
                       alt=""
                     /> 
-                    {item.userId.login}
+                    <div>
+                    {item.userId.login}</div>
                   </span>
                   <div className={styles.divText}>
                     <p className={styles.commentText}>{item.text}</p>

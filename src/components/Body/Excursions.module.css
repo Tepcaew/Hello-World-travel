@@ -124,7 +124,8 @@
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
-    padding: 20px 0
+    padding: 20px 0;
+    text-align:  center;
 }
 .oneExcursionImage{
  border-radius: 10px;
