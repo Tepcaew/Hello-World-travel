@@ -1,0 +1,148 @@
+.Header {
+  background-color: #1f1f1f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  max-height: 90px;
+  width: 100%;
+  z-index: 1;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-around;
+  width: 40%;
+}
+
+.menuPoint {
+  text-decoration: none;
+  font-size: 20px;
+  color: aliceblue;
+}
+.menuPoint:hover {
+    border-bottom: 1px solid #1f1f1f;
+    /* padding: 0px 15px 4px 15px; */
+    transform: translateY(-5px);
+    transition: 1s;
+    margin: -5;
+  }
+
+.Navigation2 {
+  display: flex;
+  cursor: pointer;
+  justify-content: space-around;
+  align-items: center;
+  width: 20%;
+}
+.Navigation2 p {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.Navigation2 img {
+  width: 30px;
+  height: 30px;
+}
+
+.Navigation2 button {
+  border-radius: 50px;
+  height: 40px;
+  width: 120px;
+  background-color: aliceblue;
+  color: black;
+}
+
+.search {
+  display: inline-block;
+  background-color: #1f1f1f;
+  position: relative;
+  height: 35px;
+  width: 35px;
+  box-sizing: border-box;
+  margin: 0px 8px 7px 0px;
+  padding: 7px 9px 0px 9px;
+  border: 3px solid white; /* Replace with actual color value */
+  border-radius: 25px;
+  transition: all 200ms ease;
+  cursor: text;
+}
+
+.search:after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 20px;
+  right: -5px;
+  top: 21px; /* Replace with actual color value */
+  border-radius: 3px;
+  transform: rotate(-45deg);
+  transition: all 200ms ease;
+  background-color: white;
+}
+
+.search.active,
+.search:hover {
+  width: 200px;
+  margin-right: 0px;
+  background-color: white;
+}
+
+.search.active:after,
+.search:hover:after {
+  height: 0px;
+  background-color: blue;
+}
+
+.search input {
+  width: 100%;
+  border: none;
+  box-sizing: border-box;
+  font-family: Helvetica;
+  font-size: 15px;
+  background-color: pink;
+  color: inherit;
+  background: transparent;
+  outline-width: 0px;
+}
+
+
+.autocomplete {
+  position: absolute;
+  z-index: 300;
+  left: -50px;
+
+  width: 300px;
+  list-style: none;
+  z-index: 1002;
+  max-height: 240px;
+  height: auto;
+}
+
+.item {
+  height: 40px;
+  background-color: #1f1f1f;
+  padding: 6px 10px 10px 12px;
+  color: darkturquoise ;
+  z-index: 105;
+}
+.autocomplete a{
+  text-decoration: none;
+  list-style: none ;
+}
+.logoBlock{
+    width: 17%;
+}
+.logo{
+    width: 100%;
+}
+.sidebarPoint{
+  cursor: pointer;
+  color: white;
+  font-size: 200%;
+  width: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}

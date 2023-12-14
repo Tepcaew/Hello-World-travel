@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { authSignIn } from "../../features/applicationSlice";
-import styles from "./Sign.module.css";
+import { authSignIn } from "../../../features/applicationSlice";
 
-const SignIn = () => {
+const SignInAdmin = () => {
   const error = useSelector((state) => state.application.error);
   const [login, setLogin] = useState("");
   const [password, setPassword] = useState("");
@@ -22,22 +21,21 @@ const SignIn = () => {
   };
 
   return (
-    <div className={styles.container}>
-      <div className={styles.content}>
-        <p className={styles.title}>Войдите в аккаунт</p>
+    <div>
+      <p>Войти как администратор</p>
+      <div>
         {error ? <div>{error}</div> : null}
         <form action="" onSubmit={handlePush}>
           <input type="text" onChange={handleLogin} value={login} />
           <input type="password" onChange={handlePassword} value={password} />
-          <button type="submit" className={styles.btn}>войти</button>
+          <button type="submit">войти</button>
         </form>
-        <div className={styles.link}>
-        <p className={styles.sign}><Link to="/signUp" >хочу зарегистрироваться</Link></p>
-          <p className={styles.sign}><Link to="/loginAdmin">войти как администратор</Link></p>
-        </div>
+      </div>
+      <div>
+        <Link to="/signUpAdmin">хочу зарегистрироваться</Link>
       </div>
     </div>
   );
 };
 
-export default SignIn;
+export default SignInAdmin;

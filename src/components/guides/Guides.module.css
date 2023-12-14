@@ -1,0 +1,70 @@
+.contGid {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+.bodyGid {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 30px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+}
+
+.infoGid {
+    margin-bottom: 30px;
+}
+
+.guideImage{
+    width: 100%;
+    display: flex;
+    margin-bottom: 4px;
+}
+
+.infoGidCart {
+    max-width: 360px;
+}
+
+.nameGid {
+    font-size: 22px;
+    line-height: 1.35;
+    margin-bottom: 4px;
+    font-family: 'Ubuntu',Arial,sans-serif;
+    font-weight: 600;
+    color: #000000;
+    margin-top: 30px;
+}
+
+.author {
+    font-size: 14px;
+    line-height: 1.55;
+    font-family: 'Ubuntu',Arial,sans-serif;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.organiz {
+    font-size: 15px;
+    line-height: 1.55;
+    font-family: 'Ubuntu',Arial,sans-serif;
+    font-weight: 300;
+    color: #000000;
+}
+
+.guidesContainer {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin: 0 auto;
+}
+.guideCard{
+    width: 30%;
+}

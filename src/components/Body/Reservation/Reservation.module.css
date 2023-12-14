@@ -1,0 +1,77 @@
+.containerReservationTour {
+  width: 100%;
+  height: 500px;
+}
+h2{
+  padding-top: 40px;
+}
+.reservationInputs {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
+}
+.reservationInputs input {
+  width: 456px;
+  margin: 10px;
+}
+
+.reservationTitle {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.reservationInputs button {
+  width: 462px;
+  height: 40px;
+  background-color: aquamarine;
+  margin: 10px;
+}
+.application {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-image:url('https://klike.net/uploads/posts/2019-11/1574605225_22.jpg');
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+}
+
+.applicationContent div {
+  text-align: center;
+}
+.applicationContent p {
+  color: rgb(253, 110, 8);
+  margin: 10px;
+  background-color: rgba(0, 0, 0, 0.555);
+  padding: 3px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* .application img{
+} */
+
+input {
+  width: 350px;
+  border-radius: 20px;
+  border-color: transparent;
+  height: 30px;
+}
+.application button {
+  color: aliceblue;
+  background-color: #010101;
+  border-radius: 25px;
+  height: 50px;
+  width: 140px;
+  margin-top: 50px;
+}
+.pt {
+  color: rgb(253, 110, 8);
+  margin: 10px;
+  background-color: rgba(0, 0, 0, 0.636);
+  padding: 10px;
+  border-radius: 10px;
+}
