@@ -1,30 +1,39 @@
-# React + TypeScript + Vite
+# Сайт турагенства "Hello, World!"
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Сайт предназначен для просмотра актуальных предложений компании, но при авторизации пользователь может оставить заявку на бронирование тура, которую Администратор компании в свою очередь подтвердит или отклонит. Так же авторизованный пользователь может оставлять отзывы о продуктах компании. Неавторизованный пользователь (гость) может только просматривать контент и оставить заявку на обратную связь. Администратор видит входящие заявки на обратную связь, заявки на бронирование и актуальную бронь.
 
-Currently, two official plugins are available:
+## Функционал
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Два вида авторизации (админ и клиент);
+- Бронирование туров клиентом с выборкой дат;
+- Подтверждение бронирования Администратором;
+- Добавление отзывов;
+- Каталог актуальных предложений;
+- Форма обратной связи.
 
-## Expanding the ESLint configuration
+## Стек проекта
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- React / React Redux, ES6
+- React router
+- Redux / Redux Toolkit
+- bootstrap / bootstrap-icons
+- Node js
+- mongoose
+- multer
+- swiper
 
-- Configure the top-level `parserOptions` property like this:
+## Команда
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+- https://github.com/Shakhdv
+- https://github.com/Tepcaew
+- https://github.com/Abdurrohman47
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Запуск
+- скачать бэк по ссылке: https://github.com/Shakhdv/Hello-World-travel-back.git
+и запустить: npx nodemon
+
+- загрузить данный репозиторий и запустить: npm run dev
+
+![photo_2023-12-14_07-28-17](https://github.com/MShakhabov/Hello-World-travel/assets/143385795/9767b46a-eee7-4829-ae37-ce48b52ad35b)
+![photo_2023-12-14_07-28-31](https://github.com/MShakhabov/Hello-World-travel/assets/143385795/6a862b06-5a18-4356-a4ad-32ae48a862b5)
+![photo_2023-12-14_07-28-34](https://github.com/MShakhabov/Hello-World-travel/assets/143385795/be2168a2-6cb1-4445-b673-99101b356363)
