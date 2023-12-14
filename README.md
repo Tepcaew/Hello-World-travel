@@ -26,6 +26,7 @@
 
 - https://github.com/Shakhdv
 - https://github.com/Tepcaew
+- https://github.com/Abdurrohman47
 
 ## Запуск
 - скачать бэк по ссылке: https://github.com/Shakhdv/Hello-World-travel-back.git
