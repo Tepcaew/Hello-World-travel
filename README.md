@@ -15,7 +15,7 @@
 
 - React / React Redux, ES6
 - React router
-- Redux / Redux Thunk
+- Redux / Redux Toolkit
 - bootstrap / bootstrap-icons
 - Node js
 - mongoose
